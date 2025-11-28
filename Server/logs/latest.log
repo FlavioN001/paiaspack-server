@@ -1,0 +1,405 @@
+[21:33:18] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.18.1
+[21:33:18] [main/WARN]: Warnings were found!
+ - Mod 'Alloy Forgery' (alloy_forgery) 2.4.1+1.21 recommends version 14.0.0 or later of roughlyenoughitems, which is missing!
+	 - You should install version 14.0.0 or later of roughlyenoughitems for the optimal experience.
+ - Mod 'Forge Config API Port' (forgeconfigapiport) 21.1.6 recommends any version of modmenu, which is missing!
+	 - You should install any version of modmenu for the optimal experience.
+ - Mod 'Simply Swords' (simplyswords) 1.62.0-1.21.1 recommends version 1.7.2 or later of bettercombat, which is missing!
+	 - You should install version 1.7.2 or later of bettercombat for the optimal experience.
+ - Mod 'Simply Swords' (simplyswords) 1.62.0-1.21.1 recommends version 0.2.0 or later of oracle_index, which is missing!
+	 - You should install version 0.2.0 or later of oracle_index for the optimal experience.
+[21:33:18] [main/INFO]: Loading 179 mods:
+	- alloy_forgery 2.4.1+1.21
+	- amendments 1.21-2.0.8
+	- appleskin 3.0.6+mc1.21
+	   \-- cloth-config 15.0.127
+	        \-- cloth-basic-math 0.6.1
+	- architectury 13.0.8
+	- artifacts 13.1.0
+	   |-- cardinal-components-base 6.1.0
+	   |-- cardinal-components-entity 6.1.0
+	   |-- com_electronwill_night-config_core 3.8.0
+	   |-- com_electronwill_night-config_toml 3.8.0
+	   \-- expandability 12.0.0
+	- balm 21.0.55
+	   \-- kuma_api 21.0.7
+	- better-fabric-console 1.2.0
+	   |-- adventure-platform-fabric 5.14.1
+	   |    |-- net_kyori_adventure-api 4.17.0
+	   |    |-- net_kyori_adventure-key 4.17.0
+	   |    |-- net_kyori_adventure-platform-api 4.3.3
+	   |    |-- net_kyori_adventure-text-logger-slf4j 4.17.0
+	   |    |-- net_kyori_adventure-text-minimessage 4.17.0
+	   |    |-- net_kyori_adventure-text-serializer-ansi 4.17.0
+	   |    |-- net_kyori_adventure-text-serializer-gson 4.17.0
+	   |    |-- net_kyori_adventure-text-serializer-json 4.17.0
+	   |    |-- net_kyori_adventure-text-serializer-plain 4.17.0
+	   |    |-- net_kyori_ansi 1.1.0
+	   |    |-- net_kyori_examination-api 1.3.0
+	   |    |-- net_kyori_examination-string 1.3.0
+	   |    \-- net_kyori_option 1.0.0
+	   |-- com_typesafe_config 1.4.1
+	   |-- io_leangen_geantyref_geantyref 1.3.11
+	   |-- net_fabricmc_mapping-io 0.6.1
+	   |-- org_fusesource_jansi_jansi 2.4.1
+	   |-- org_jline_jline 3.27.0
+	   |-- org_jline_jline-terminal-jansi 3.27.0
+	   |-- org_spongepowered_configurate-core 4.1.2
+	   \-- org_spongepowered_configurate-hocon 4.1.2
+	- carryon 2.2.2
+	- collective 8.13
+	- coolrain 1.3.0-1.21.1
+	- creativecore 2.13.14
+	   \-- net_neoforged_bus 7.2.0
+	- doubledoors 7.2
+	- easymagic 21.1.4
+	- explorify 1.6.4
+	- fabric-api 0.116.7+1.21.1
+	   |-- fabric-api-base 0.4.42+6573ed8c19
+	   |-- fabric-api-lookup-api-v1 1.6.71+b559734419
+	   |-- fabric-biome-api-v1 13.0.31+d527f9fd19
+	   |-- fabric-block-api-v1 1.1.0+0bc3503219
+	   |-- fabric-block-view-api-v2 1.0.11+ebb2264e19
+	   |-- fabric-blockrenderlayer-v1 1.1.52+0af3f5a719
+	   |-- fabric-client-tags-api-v1 1.1.15+6573ed8c19
+	   |-- fabric-command-api-v1 1.2.49+f71b366f19
+	   |-- fabric-command-api-v2 2.2.28+6ced4dd919
+	   |-- fabric-commands-v0 0.2.66+df3654b319
+	   |-- fabric-content-registries-v0 8.0.19+b559734419
+	   |-- fabric-convention-tags-v1 2.1.5+7f945d5b19
+	   |-- fabric-convention-tags-v2 2.11.1+a406e79519
+	   |-- fabric-crash-report-info-v1 0.2.29+0af3f5a719
+	   |-- fabric-data-attachment-api-v1 1.4.5+6116a37819
+	   |-- fabric-data-generation-api-v1 20.2.34+37516cd619
+	   |-- fabric-dimensions-v1 4.0.1+65213ef819
+	   |-- fabric-entity-events-v1 1.8.0+2b27e0a419
+	   |-- fabric-events-interaction-v0 0.7.13+ba9dae0619
+	   |-- fabric-game-rule-api-v1 1.0.53+6ced4dd919
+	   |-- fabric-item-api-v1 11.2.0+3b3cb2e819
+	   |-- fabric-item-group-api-v1 4.1.7+def88e3a19
+	   |-- fabric-key-binding-api-v1 1.0.47+0af3f5a719
+	   |-- fabric-keybindings-v0 0.2.45+df3654b319
+	   |-- fabric-lifecycle-events-v1 2.6.0+0865547519
+	   |-- fabric-loot-api-v2 3.0.15+3f89f5a519
+	   |-- fabric-loot-api-v3 1.0.3+3f89f5a519
+	   |-- fabric-message-api-v1 6.0.14+8aaf3aca19
+	   |-- fabric-model-loading-api-v1 2.1.0+b4d813fc19
+	   |-- fabric-networking-api-v1 4.3.0+c7469b2119
+	   |-- fabric-object-builder-api-v1 15.2.1+40875a9319
+	   |-- fabric-particles-v1 4.0.2+6573ed8c19
+	   |-- fabric-recipe-api-v1 5.0.15+2475392c19
+	   |-- fabric-registry-sync-v0 5.3.1+e3eddc2119
+	   |-- fabric-renderer-api-v1 3.4.1+b4d813fc19
+	   |-- fabric-renderer-indigo 1.7.1+c705a49c19
+	   |-- fabric-renderer-registries-v1 3.2.69+df3654b319
+	   |-- fabric-rendering-data-attachment-v1 0.3.49+73761d2e19
+	   |-- fabric-rendering-fluids-v1 3.1.6+1daea21519
+	   |-- fabric-rendering-v0 1.1.72+df3654b319
+	   |-- fabric-rendering-v1 5.1.0+ab4c25a019
+	   |-- fabric-resource-conditions-api-v1 4.3.0+8dc279b119
+	   |-- fabric-resource-loader-v0 1.3.1+5b5275af19
+	   |-- fabric-screen-api-v1 2.0.25+8b68f1c719
+	   |-- fabric-screen-handler-api-v1 1.3.90+b559734419
+	   |-- fabric-sound-api-v1 1.0.23+6573ed8c19
+	   |-- fabric-transfer-api-v1 5.4.3+c24bd99419
+	   \-- fabric-transitive-access-wideners-v1 6.2.0+45b9699719
+	- fabric-language-kotlin 1.13.7+kotlin.2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-reflect 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 2.2.21
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 2.2.21
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.29.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.7.1
+	   |-- org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-io-core-jvm 0.8.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.9.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.9.0
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.9.0
+	- fabricloader 0.18.1
+	   \-- mixinextras 0.5.0
+	- fallingtrees 0.13.2
+	- farmersdelight 1.21.1-3.2.2+refabricated
+	   \-- mm 2.3
+	- ferritecore 7.0.2-hotfix
+	- forgeconfigapiport 21.1.6
+	   |-- com_electronwill_night-config_core 3.8.0
+	   \-- com_electronwill_night-config_toml 3.8.0
+	- fzzy_config 0.7.3+1.21
+	   |-- blue_endless_jankson 1.2.3
+	   |-- fabric-permissions-api-v0 0.3.1
+	   \-- net_peanuuutz_tomlkt_tomlkt-jvm 0.3.7
+	- gravestones 1.2.3+1.21.1+A
+	- immersive_aircraft 1.4.1+1.21.1
+	   \-- org_mariuszgromada_math_mathparser_org-mxparser 5.2.1
+	- immersive_armors 1.7.5+1.21.1
+	- immersive_furniture 0.1.2+1.21.1
+	- immersive_optimization 0.1.0
+	- immersive_paintings 0.7.4
+	   |-- com_twelvemonkeys_common_common-image 3.12.0
+	   |-- com_twelvemonkeys_common_common-lang 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-core 3.12.0
+	   \-- com_twelvemonkeys_imageio_imageio-webp 3.12.0
+	- itemphysic 1.8.9
+	- jamlib 1.3.5+1.21.1
+	   \-- blue_endless_jankson 1.2.3
+	- java 25
+	- jei 19.25.0.325
+	- lithium 0.15.1+mc1.21.1
+	- lootr 1.21-1.10.35.92
+	- man_of_many_planes 0.2.1+1.21.1
+	- minecraft 1.21.1
+	- modernfix 5.25.1+mc1.21.1
+	- moonlight 1.21-2.26.6
+	- mythicmetals 0.24.4+1.21
+	   |-- additionalentityattributes 1.8.0+1.21
+	   |-- cardinal-components-base 6.1.0
+	   |-- cardinal-components-entity 6.1.0
+	   \-- common-protection-api 1.0.0
+	- owo 0.12.11+1.21
+	   |-- io_wispforest_endec 0.1.5
+	   |-- io_wispforest_endec_gson 0.1.3
+	   |-- io_wispforest_endec_jankson 0.1.3
+	   \-- io_wispforest_endec_netty 0.1.2
+	- pandalib 0.5.2
+	- pneumonocore 1.21.1
+	- puzzleslib 21.1.39
+	- rightclickharvest 4.6.0+1.21.1
+	- scalablelux 0.1.0.1+fabric.d0d58ab
+	- silk-all 1.10.7
+	   |-- silk-commands 1.10.7
+	   |-- silk-core 1.10.7
+	   |-- silk-game 1.10.7
+	   |-- silk-igui 1.10.7
+	   |-- silk-nbt 1.10.7
+	   |-- silk-network 1.10.7
+	   \-- silk-persistence 1.10.7
+	- simplyswords 1.62.0-1.21.1
+	- smallships 2.0.0-b2.1
+	- sophisticatedcore 1.21.1-1.2.9.20.164
+	   |-- porting_lib_conditions 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_core 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_fluids 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_item_abilities 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_lazy_registration 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_level_events 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_loot 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_model_loader 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_render_types 3.1.0-beta.47+1.21.1
+	   |-- porting_lib_transfer 3.1.0-beta.47+1.21.1
+	   \-- team_reborn_energy 4.1.0
+	- sophisticatedstorage 1.21.1-1.3.7.8.135
+	- suikefoxfriend 3.4.1
+	- supplementaries 1.21-3.4.20
+	   \-- mixinsquared 0.1.1
+	- toms_storage 2.2.2
+	   |-- cardinal-components-base 6.1.0
+	   |-- cardinal-components-block 6.1.0
+	   \-- cloth-config 15.0.127
+	        \-- cloth-basic-math 0.6.1
+	- trade_cycling 1.21.1-1.0.18
+	   |-- fabric-key-binding-api-v1 1.0.47+0af3f5a76a
+	   \-- fabric-screen-api-v1 2.0.24+b55973446a
+	- travelersbackpack 10.1.27
+	- trinkets 3.10.0
+	   |-- cardinal-components-base 6.1.0
+	   \-- cardinal-components-entity 6.1.0
+	- veinminer 2.4.2
+	   |-- de_miraculixx_core_dev 2.4.2
+	   \-- fabric-permissions-api-v0 0.3.1
+	- veinminer-enchantment 2.5.0
+	- villagerleads 0.0.3
+	- voicechat 1.21.1-2.6.6
+	   |-- fabric-key-binding-api-v1 1.0.47+0af3f5a76a
+	   \-- voicechat_api 2.6.0
+	- waystones 21.1.24
+[21:33:19] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/Flero/Desktop/mano%20finalmente/libraries/net/fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[21:33:19] [main/INFO]: Compatibility level set to JAVA_21
+[21:33:19] [main/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:33:20] [main/WARN]: Mod 'ferritecore' attempted to override option 'mixin.alloc.blockstate', which doesn't exist, ignoring
+[21:33:20] [main/WARN]: Mod 'supplementaries' attempted to override option 'mixins.block.moving_block_shapes', which doesn't exist, ignoring
+[21:33:20] [main/INFO]: Option 'mixin.entity.collisions.fluid' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.entity.collisions.fluid=false'.
+[21:33:20] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
+[21:33:20] [main/INFO]: Option 'mixin.experimental.entity.block_caching.fluid_pushing' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.fluid_pushing=false'.
+[21:33:20] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_touching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_touching=false'.
+[21:33:20] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
+[21:33:20] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
+[21:33:20] [main/INFO]: Loaded configuration file for Lithium: 149 options available, 1 override(s) found
+[21:33:20] [main/INFO]: Loaded configuration file for ModernFix 5.25.1+mc1.21.1: 65 options available, 0 override(s) found
+[21:33:20] [main/INFO]: Applying Nashorn fix
+[21:33:20] [main/WARN]: Reference map 'pandalib-common-common-refmap.json' for pandalib-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[21:33:20] [main/WARN]: Error loading class: net/minecraft/class_906 (java.lang.ClassNotFoundException: net/minecraft/class_906)
+[21:33:20] [main/WARN]: @Mixin target net.minecraft.class_906 was not found porting_lib_item_abilities.mixins.json:FishingHookRendererMixin from mod porting_lib_item_abilities
+[21:33:21] [main/WARN]: Error loading class: com/electronwill/nightconfig/core/io/IoUtils (java.lang.ClassNotFoundException: com/electronwill/nightconfig/core/io/IoUtils)
+[21:33:21] [main/INFO]: Force-disabling mixin 'block.moving_block_shapes.PistonMovingBlockEntityMixin' as rule 'mixin.block.moving_block_shapes' (added by mods [supplementaries]) disables it and children
+[21:33:21] [main/INFO]: Force-disabling mixin 'block.moving_block_shapes.VoxelShapeMixin' as rule 'mixin.block.moving_block_shapes' (added by mods [supplementaries]) disables it and children
+[21:33:21] [main/WARN]: Error loading class: net/minecraft/class_525 (java.lang.ClassNotFoundException: net/minecraft/class_525)
+[21:33:21] [main/WARN]: @Mixin target net.minecraft.class_525 was not found moonlight.mixins.json:CreateWorldScreenMixin from mod moonlight
+[21:33:21] [main/WARN]: Error loading class: net/minecraft/class_287 (java.lang.ClassNotFoundException: net/minecraft/class_287)
+[21:33:21] [main/WARN]: @Mixin target net.minecraft.class_287 was not found owo.mixins.json:BufferBuilderAccessor from mod owo
+[21:33:21] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[21:33:21] [main/WARN]: @Mixin target net.minecraft.class_437 was not found owo.mixins.json:ScreenAccessor from mod owo
+[21:33:21] [main/WARN]: Error loading class: xyz/nucleoid/server/translations/impl/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: xyz/nucleoid/server/translations/impl/language/SystemDelegatedLanguage)
+[21:33:21] [main/WARN]: Error loading class: net/minecraft/class_638 (java.lang.ClassNotFoundException: net/minecraft/class_638)
+[21:33:21] [main/WARN]: @Mixin target net.minecraft.class_638 was not found porting_lib_level_events.mixins.json:client.ClientLevelMixin from mod porting_lib_level_events
+[21:33:21] [main/WARN]: Error loading class: me/jellysquid/mods/sodium/client/render/chunk/compile/pipeline/FluidRenderer (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/render/chunk/compile/pipeline/FluidRenderer)
+[21:33:22] [main/INFO]: Initializing Better Fabric Console...
+[21:33:22] [main/INFO]: Initializing Better Fabric Console mappings...
+[21:33:22] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[21:33:23] [main/INFO]: Reading mappings...
+[21:33:23] [main/INFO]: Done in 0,2180 seconds.
+[21:33:28] [main/INFO]: Injecting BlockStateBase cache population hook into getOpacityIfCached from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
+[21:33:28] [main/INFO]: Injecting BlockStateBase cache population hook into isConditionallyFullOpaque from ca.spottedleaf.starlight.mixin.common.blockstate.BlockStateBaseMixin
+[21:33:29] [main/WARN]: Method overwrite conflict for method_21740 in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[21:33:35] [main/INFO]: Vanilla bootstrap took 10442 milliseconds
+[21:33:36] [main/INFO]: Loaded config amendments-common.json
+[21:33:36] [main/ERROR]: No data fixer registered for artifacts:mimic
+[21:33:37] [main/INFO]: Loading Collective version 8.13.
+[21:33:37] [main/INFO]: Constructing common components for easymagic:main
+[21:33:37] [main/INFO]: Dispatching loading event for config easymagic-common.toml
+[21:33:37] [main/INFO]: ExpandAbility here, who dis?
+[21:33:37] [main/INFO]: Successfully loaded config 'fallingtrees_common'
+[21:33:37] [main/INFO]: Successfully saved config 'fallingtrees_common'
+[21:33:37] [main/INFO]: Loaded config farmersdelight-common.json
+[21:33:39] [main/INFO]: Initializing Gravestones
+[21:33:39] [main/ERROR]: No data fixer registered for gravestone_skeleton
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:gyrodyne
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:biplane
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:airship
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:cargo_airship
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:warship
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:quadrocopter
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:bamboo_hopper
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:bullet
+[21:33:39] [main/ERROR]: No data fixer registered for immersive_aircraft:tiny_tnt
+[21:33:39] [main/ERROR]: No data fixer registered for sitting
+[21:33:40] [main/INFO]: Loaded config immersive_paintings:common_config in 535ms
+[21:33:40] [main/INFO]: Loaded config immersive_paintings:client_config in 16ms
+[21:33:40] [main/ERROR]: No data fixer registered for immersive_paintings:painting
+[21:33:40] [main/ERROR]: No data fixer registered for immersive_paintings:glow_painting
+[21:33:40] [main/ERROR]: No data fixer registered for immersive_paintings:graffiti
+[21:33:40] [main/ERROR]: No data fixer registered for immersive_paintings:glow_graffiti
+[21:33:40] [main/INFO]: Initializing JamLib on Fabric
+[21:33:40] [main/ERROR]: No data fixer registered for man_of_many_planes:scarlet_biplane
+[21:33:40] [main/ERROR]: No data fixer registered for man_of_many_planes:economy_plane
+[21:33:40] [main/INFO]: Definitely not up to no good
+[21:33:40] [main/INFO]: Loaded config moonlight-common.json
+[21:33:40] [main/INFO]: [Mythic Metals] Mythic Metals is now initialized.
+[21:33:40] [main/INFO]: blod: I think I need to take a book out of your page
+[21:33:40] [main/INFO]: Initializing PneumonoCore
+[21:33:40] [main/INFO]: Constructing common components for puzzleslib:main
+[21:33:40] [main/INFO]: Updated config file at /home/Flero/Desktop/mano finalmente/config/rightclickharvest.json5
+[21:33:40] [main/INFO]: Initializing Right Click Harvest on FABRIC
+[21:33:40] [main/INFO]: Initializing Silk
+[21:33:40] [main/INFO]: Loaded config simplyswords:general in 32ms
+[21:33:41] [main/INFO]: Loaded config simplyswords:gem_powers in 453ms
+[21:33:41] [main/INFO]: Loaded config simplyswords:status_effects in 8ms
+[21:33:41] [main/INFO]: Loaded config simplyswords:weapon_attributes in 128ms
+[21:33:41] [main/INFO]: Loaded config simplyswords:unique_effects in 394ms
+[21:33:42] [main/ERROR]: No data fixer registered for battlestandard
+[21:33:42] [main/ERROR]: No data fixer registered for battlestandarddark
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:simplybeeentity
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:simplyaxolotlentity
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:thrown_sword
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:frostfall_entity
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:livyatan_entity
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:spear_entity
+[21:33:42] [main/ERROR]: No data fixer registered for simplyswords:runic_entity
+[21:33:42] [main/INFO]: Registering Mythic Metals items
+[21:33:42] [main/INFO]: [STDOUT]: /home/Flero/Desktop/mano finalmente/config
+[21:33:42] [main/INFO]: Loaded config supplementaries-common.json
+[21:33:43] [main/INFO]: Tom's Storage Setup starting
+[21:33:44] [main/ERROR]: No data fixer registered for 
+[21:33:44] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:water for Water (Fluid Amount Required: 81000) with the ID 0
+[21:33:44] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:lava for Lava (Fluid Amount Required: 81000) with the ID 1
+[21:33:44] [main/INFO]: Registered the FluidEffect with Unique ID of travelersbackpack:potion for block.travelersbackpack.potion_still (Fluid Amount Required: 27000) with the ID 2
+[21:33:44] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:milk for Air (Fluid Amount Required: 81000) with the ID 3
+[21:33:44] [main/INFO]: Veinminer Version: 2.4.2 (fabric)
+[21:33:45] [main/INFO]: Veinminer-Enchantment Version: 2.5.0 (fabric)
+[21:33:45] [main/INFO]: [voicechat] Compatibility version 20
+[21:33:45] [main/INFO]: [voicechat] Loading plugins
+[21:33:45] [main/INFO]: [voicechat] Loaded 0 plugin(s)
+[21:33:45] [main/INFO]: [voicechat] Initializing plugins
+[21:33:45] [main/INFO]: [voicechat] Initialized 0 plugin(s)
+[21:33:45] [DefaultDispatcher-worker-3/INFO]: [STDOUT]: [VeinminerUpdater] veinminer is up to date
+[21:33:46] [main/ERROR]: No data fixer registered for medium_dragon_fireball
+[21:33:46] [main/ERROR]: No data fixer registered for medium_fireball
+[21:33:46] [main/ERROR]: No data fixer registered for falling_lantern
+[21:33:46] [main/ERROR]: No data fixer registered for dispenser_minecart
+[21:33:46] [main/ERROR]: No data fixer registered for falling_urn
+[21:33:46] [main/ERROR]: No data fixer registered for falling_ash
+[21:33:46] [main/ERROR]: No data fixer registered for falling_sack
+[21:33:46] [main/ERROR]: No data fixer registered for brick_projectile
+[21:33:46] [main/ERROR]: No data fixer registered for slimeball_projectile
+[21:33:46] [main/ERROR]: No data fixer registered for bomb
+[21:33:46] [main/ERROR]: No data fixer registered for cannonball
+[21:33:46] [main/ERROR]: No data fixer registered for rope_arrow
+[21:33:46] [main/ERROR]: No data fixer registered for slingshot_projectile
+[21:33:46] [main/ERROR]: No data fixer registered for cannon_boat
+[21:33:46] [main/INFO]: Initialized block sets in 36ms
+[21:33:46] [main/INFO]: Initialized color sets in 30ms
+[21:33:46] [main/INFO]: Finished mod setup in: [0, 0, 1, 0, 0, 0] ms
+[21:33:46] [main/ERROR]: Registry 'porting_lib:global_loot_modifier_serializers' was empty after loading
+[21:33:46] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[21:33:47] [main/INFO]: Resource cache state for SERVER_DATA: up to date
+[21:33:47] [main/INFO]: Populated search tree for pack at /home/Flero/Desktop/mano finalmente/dynamic-data-pack-cache/supplementaries-generated_pack in 5.456 ms
+[21:33:47] [main/INFO]: Starting runtime resource generation for pack type SERVER_DATA with generators [supplementaries:generated_pack]
+[21:33:47] [main/INFO]: Skipping regeneration for Dynamic SERVER_DATA Resources Provider [supplementaries:generated_pack] (cache up-to-date)
+[21:33:47] [main/INFO]: Finished runtime resources generation for 1 packs in a total of 4.866 ms 
+[21:33:48] [Worker-Main-3/INFO]: Loaded config simplyswords:loot in 22ms
+[21:33:49] [Worker-Main-3/WARN]: Found loot table element validation problem in {minecraft:loot_table/minecraft:chests/pillager_outpost}.pools[11].entries[0]: Unknown loot table called supplementaries:inject/pillager_quiver
+[21:33:51] [main/INFO]: Loaded 3415 recipes
+[21:33:51] [main/INFO]: Loaded 2303 advancements
+[21:33:51] [main/INFO]: Applied 17 data villager trades
+[21:33:51] [main/WARN]: Could not decode GlobalLootModifier with json id supplementaries:fishing_antique_ink_treasure - error: Unknown registry key in ResourceKey[minecraft:root / porting_lib:global_loot_modifier_serializers]: moonlight:add_item
+[21:33:51] [main/WARN]: Could not decode GlobalLootModifier with json id supplementaries:straw_from_flax - error: Unknown registry key in ResourceKey[minecraft:root / porting_lib:global_loot_modifier_serializers]: moonlight:add_item
+[21:33:51] [main/WARN]: Could not decode GlobalLootModifier with json id supplementaries:replace_rope - error: Unknown registry key in ResourceKey[minecraft:root / porting_lib:global_loot_modifier_serializers]: supplementaries:replace_rope
+[21:33:51] [main/WARN]: Could not decode GlobalLootModifier with json id supplementaries:fishing_antique_ink - error: Unknown registry key in ResourceKey[minecraft:root / porting_lib:global_loot_modifier_serializers]: moonlight:add_item
+[21:33:51] [main/WARN]: Could not decode GlobalLootModifier with json id supplementaries:ash_from_burning_mobs - error: Unknown registry key in ResourceKey[minecraft:root / porting_lib:global_loot_modifier_serializers]: moonlight:add_item
+[21:33:51] [main/INFO]: Loaded 28 flute songs
+[21:33:51] [main/WARN]: Not all defined tags for registry ResourceKey[minecraft:root / minecraft:item] are present in data pack: c:ingots/lead, c:storage_blocks/lead
+[21:33:51] [main/INFO]: Registering custom dispenser behaviors
+[21:33:52] [main/WARN]: Initial datapack load took 4.903 s
+[21:33:52] [main/INFO]: Applied 1253 biome modifications to 63 of 64 new biomes in 37.84 ms
+[21:33:52] [Server thread/INFO]: Initialized mcCoroutineScope (MinecraftServer as executor)
+[21:33:52] [Server thread/INFO]: Dispatching loading event for config easymagic-server.toml
+[21:33:52] [Console thread/INFO]: Initialized Better Fabric Console console thread.
+[21:33:52] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[21:33:52] [Server console handler/INFO]: Shutting down vanilla console thread...
+[21:33:52] [Server thread/INFO]: Loading properties
+[21:33:52] [Server thread/INFO]: Default game type: SURVIVAL
+[21:33:52] [Server thread/INFO]: Generating keypair
+[21:33:52] [Server thread/INFO]: Starting Minecraft server on *:28282
+[21:33:52] [Server thread/INFO]: Using epoll channel type
+[21:33:52] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[21:33:52] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[21:33:52] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[21:33:52] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[21:33:52] [Server thread/INFO]: Preparing level "Paia's SMP"
+[21:33:53] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:33:53] [Server thread/WARN]: Method overwrite conflict for removeIf in modernfix-common.mixins.json:bugfix.paper_chunk_patches.SortedArraySetMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.collections.chunk_tickets.SortedArraySetMixin. Skipping method.
+[21:33:53] [Server thread/INFO]: [STDOUT]: [ScalableLux] Lighting scaling is enabled, using 4 threads
+[21:33:54] [Worker-Main-11/INFO]: Preparing spawn area: 0%
+[21:33:54] [Worker-Main-11/INFO]: Preparing spawn area: 0%
+[21:33:54] [Worker-Main-4/INFO]: Preparing spawn area: 26%
+[21:33:54] [Server thread/INFO]: Time elapsed: 1280 ms
+[21:33:54] [Server thread/INFO]: Done (2.136s)! For help, type "help"
+[21:33:54] [Server thread/WARN]: Dedicated server took 38.995 seconds to load
+[21:33:56] [Server thread/WARN]: [voicechat] Running in offline mode - Voice chat encryption is not secure!
+[21:33:56] [VoiceChatServerThread/INFO]: [voicechat] Voice chat server started at port 24454
+[21:33:57] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2137ms or 42 ticks behind
+[21:33:57] [Server thread/INFO]: [STDOUT]: Lithium Cached BlockState Flags are disabled!
+[21:34:24] [Server thread/INFO]: Stopping the server
+[21:34:24] [Server thread/INFO]: Stopping server
+[21:34:24] [Server thread/INFO]: Saving players
+[21:34:24] [Server thread/INFO]: Saving worlds
+[21:34:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Paia's SMP - teste]'/minecraft:overworld
+[21:34:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Paia's SMP - teste]'/minecraft:the_end
+[21:34:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Paia's SMP - teste]'/minecraft:the_nether
+[21:34:24] [Immersive Optimization Worker/INFO]: Shutting down Immersive Optimization worker
+[21:34:24] [Server thread/INFO]: ThreadedAnvilChunkStorage (Paia's SMP): All chunks are saved
+[21:34:24] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:34:24] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:34:24] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[21:34:24] [Server thread/INFO]: Dispatching unloading event for config easymagic-server.toml
