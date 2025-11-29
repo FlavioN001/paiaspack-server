@@ -1,0 +1,18 @@
+[Unit]
+Description=Servidor de Minecraft
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/startserver
+StandardInput=tty
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty4
+TTYReset=yes
+TTYVHangup=yes
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

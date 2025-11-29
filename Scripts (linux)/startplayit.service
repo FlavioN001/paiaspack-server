@@ -1,0 +1,17 @@
+[Unit]
+Description=Playit Tunnel Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/playit
+Restart=always
+RestartSec=10
+User=seu-usuario
+WorkingDirectory=/home/seu-usuario
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
