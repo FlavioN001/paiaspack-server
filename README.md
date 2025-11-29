@@ -42,8 +42,7 @@ Para isso, devemos iniciar uma sessão automaticamente em um tty alternativo. Is
 ```
 sudo systemctl edit getty@tty4
 ```
-A partir daí, você deve se deparar com um arquivo de texto parecido com isso
-        
+A partir daí, você deve se deparar com um arquivo de texto parecido com isso:
 ![Exemplo do getty@tty4 antes da edição](/assets/tty4before.png)
         
 ### Repare que há uma área específica para a inserção de texto, logo após as duas primeiras linhas. Qualquer coisa escrita depois do texto comentado abaixo será ignorada pela edição.
