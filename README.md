@@ -77,11 +77,11 @@ Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tu
             
 
             
-###Agora que a parte mais chata já foi...
+### Agora que a parte mais chata já foi...
 Finalmente, na pasta `paiaspack-server/Scripts (linux)/`:
 edite o script (startserver):
 Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta Server/ que você guardou.
-- em seguida, transforme ele em um executável
+em seguida, transforme ele em um executável
 ```
 chmod +x startserver
 ```
@@ -101,8 +101,7 @@ Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente,
 Entretanto nem todos poderão conectar, pois até hoje alguns provedores de internet não provêm acesso a rede IPv6.
     
 A solução definitiva para isso é usar um serviço de tunneling, eu usarei o [playit](playit.gg).
-Instale o playit em seu computador:
-debian:
+Instale o playit em seu computador debian:
 ```
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
