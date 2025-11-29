@@ -36,6 +36,7 @@ cp -r Server/ ~/diretório/de/sua/escolha/
         
         
 ##Automação
+
 agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.
 A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.
 Para isso, devemos iniciar uma sessão automaticamente em um tty alternativo. Isso é possível a partir da edição do serviço getty@tty4 (usarei o 4 pois é comum estar sem uso), desta forma:
