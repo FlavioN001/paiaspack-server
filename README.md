@@ -35,7 +35,7 @@ cp -r Server/ ~/diretório/de/sua/escolha/
 ```
         
         
-###Automação
+### Automação
 
 agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.
 A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.
