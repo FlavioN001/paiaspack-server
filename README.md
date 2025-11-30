@@ -53,7 +53,7 @@ Na área indicada, você deve adicionar as seguintes linhas
 ExecStart=
 ExecStart=-/sbin/agetty --autologin seuusuario --noclear %I 38400 linux
 ```
-*Lembre de alterar o "seuusuário" para inserir o seu usuário do sistema.*
+*Lembre de alterar o "seuusuario" para inserir o seu usuário do sistema.*
 
 O resultado deve ser algo parecido com isso:
 ![Exemplo do getty@tty4 depois da edição](/assets/tty4after.png)
