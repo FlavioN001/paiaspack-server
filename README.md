@@ -7,7 +7,7 @@
 ### Dependências:
 [Git](https://git-scm.com/install/linux)\
 [java 21](https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html#JSJIG-GUID-ADC9C14A-5F51-4C32-802C-9639A947317F)\
-Editor de texto em terminal de sua preferência, ex: [nano](https://www.nano-editor.org/) 
+Editor de texto em terminal de sua preferência, (ex: [nano](https://www.nano-editor.org/))
 
 ### Recomendações:
 
