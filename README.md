@@ -47,21 +47,14 @@ A partir daí, você deve se deparar com um arquivo de texto parecido com isso:
 ![Exemplo do getty@tty4 antes da edição](/assets/tty4before.png)
         
 ### Repare que há uma área específica para a inserção de texto, logo após as duas primeiras linhas. Qualquer coisa escrita depois do texto comentado abaixo será ignorada pela edição.
-Na área indicada, você deve adicionar o seguinte como as primeiras linhas (de edição):
+Na área indicada, você deve adicionar as seguintes linhas
  ```
 [Service]
 ExecStart=
+ExecStart=-/sbin/agetty --autologin seuusuario --noclear %I 38400 linux
 ```
-        
-Nesse mesmo arquivo, você deve encontrar a linha ExecStart comentada abaixo. Copie ela (ctrl+shift+c) e cole abaixo do ExecStart inserido a área indicada, ficará algo parecido com isso:
-```
-[Service]
-ExecStart=
-ExecStart=-/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - ${TERM}
-```
-        
-Enfim, edite o comando copiado para adicionar o parâmetro `--autologin seu-usuário`, substituindo "seu-usuário" pelo seu usuário (duh).
-        
+*Lembre de alterar o "seuusuário" para inserir o seu usuário do sistema.
+
 O resultado deve ser algo parecido com isso:
 ![Exemplo do getty@tty4 depois da edição](/assets/tty4after.png)
         
