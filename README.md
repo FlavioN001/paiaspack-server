@@ -39,7 +39,7 @@ cp -r Server/ ~/diretório/de/sua/escolha/
 
 agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.\
 A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.\
-Para isso, devemos iniciar uma sessão automaticamente em um tty alternativo. Isso é possível a partir da edição do serviço getty@tty4 (usarei o 4 pois é comum estar sem uso), desta forma:
+Para isso, devemos iniciar uma sessão automaticamente em um outro tty. Isso é possível a partir da edição do serviço getty@tty4 (usarei o 4 pois é comum estar sem uso), desta forma:
 ```
 sudo systemctl edit getty@tty4
 ```
@@ -79,9 +79,9 @@ Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tu
             
 ### Agora que a parte mais chata já foi...
 Finalmente, na pasta `paiaspack-server/Scripts (linux)/`:
-edite o script (startserver):
-Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta Server/ que você guardou.
-em seguida, transforme ele em um executável
+edite o script de inicialização (startserver):
+Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.
+em seguida, transforme ele em um executável:
 ```
 chmod +x startserver
 ```
@@ -98,9 +98,9 @@ Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente,
 ```
 [seu endereço IPv6]:28282
 ```    
-Entretanto, nem todos poderão conectar, pois até hoje alguns provedores de internet não provêm acesso a rede IPv6.
+Entretanto, nem todos os jogadores poderão se conectar ao servidor, pois até hoje alguns provedores de internet não disponibilizam acesso à rede IPv6.
     
-A solução definitiva para isso é usar um serviço de tunneling, eu usarei o [playit](playit.gg).
+A solução definitiva para isso é usar um serviço de tunneling, eu usarei o [Play It](playit.gg).\
 Instale o playit em seu computador debian:
 ```
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
@@ -109,7 +109,7 @@ sudo apt update
 sudo apt install playit
 ```
         
-Em seguida, copie o script de inicialização (na pasta `paiaspack-server/Scripts (linux)/`) do playit e ative ele pelo systemd:
+Em seguida, copie o script de inicialização do Play It (na pasta `paiaspack-server/Scripts (linux)/`) e ative ele pelo systemd:
 ```
 sudo cp startplayit.service /etc/systemd/system/
 sudo systemctl daemon-reload
