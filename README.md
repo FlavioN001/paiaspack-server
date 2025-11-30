@@ -5,15 +5,15 @@
 ### O ideal é usar isso no [debian](https://www.debian.org/), já que é o que eu usei e é um sistema estável para servidores, mas não é impossível fazer isso em qualquer outra distro linux, desde que você saiba o que está fazendo.
 
 ### Dependências:
-[Git](https://git-scm.com/install/linux)
-[java 21](https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html#JSJIG-GUID-ADC9C14A-5F51-4C32-802C-9639A947317F)
-Editor de texto em terminal de sua preferência, ex: [nano](https://www.nano-editor.org/)
+[Git](https://git-scm.com/install/linux)\
+[java 21](https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html#JSJIG-GUID-ADC9C14A-5F51-4C32-802C-9639A947317F)\
+Editor de texto em terminal de sua preferência, ex: [nano](https://www.nano-editor.org/) 
 
 ### Recomendações:
 
-Um computador dedicado rodando uma distro linux com systemd.
-Familiaridade com o terminal linux
-Pelo menos 6gb RAM
+Um computador dedicado rodando uma distro linux com systemd.\
+Familiaridade com tty e o terminal linux\
+Pelo menos 6gb RAM\
 Processamento decente (sandy bridge ou mais novo)
 
 ### Instruções
@@ -37,8 +37,8 @@ cp -r Server/ ~/diretório/de/sua/escolha/
         
 ### Automação
 
-agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.
-A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.
+agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.\
+A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.\
 Para isso, devemos iniciar uma sessão automaticamente em um tty alternativo. Isso é possível a partir da edição do serviço getty@tty4 (usarei o 4 pois é comum estar sem uso), desta forma:
 ```
 sudo systemctl edit getty@tty4
@@ -98,7 +98,7 @@ Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente,
 ```
 [seu endereço IPv6]:28282
 ```    
-Entretanto nem todos poderão conectar, pois até hoje alguns provedores de internet não provêm acesso a rede IPv6.
+Entretanto, nem todos poderão conectar, pois até hoje alguns provedores de internet não provêm acesso a rede IPv6.
     
 A solução definitiva para isso é usar um serviço de tunneling, eu usarei o [playit](playit.gg).
 Instale o playit em seu computador debian:
