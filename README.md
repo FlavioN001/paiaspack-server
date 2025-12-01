@@ -120,9 +120,9 @@ sudo systemctl start playit
 sudo systemctl enable playit
 playit setup
 ```
-Então, entre na url do seu terminal e faça a configuração do serviço [playit](playit.gg), adicionando um tunnel para a porta `28282`(para o servidor) e outro para `24454`(para o voicechat)
+Então, entre na url que aparecerá no seu terminal e faça a configuração do serviço [playit](playit.gg), adicionando um tunnel para a porta `28282`(para o servidor) e outro para `24454`(para o voicechat)
 
-*IMPORTANTE*
+*IMPORTANTE* \
 Para o voicechat funcionar, também é necessário adicionar o ip do tunnel playit que você criou com a porta 24454 ao arquivo de configuração `Server/config/voicechat/voicechat-server.properties`
 na linha `voice_host=`
 
