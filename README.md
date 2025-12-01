@@ -7,6 +7,7 @@
 ### Dependências:
 [Git](https://git-scm.com/install/linux)\
 [java 21](https://www.oracle.com/java/technologies/downloads/#java21)\
+[Screen](https://wiki.debian.org/screen)
 Editor de texto em terminal de sua preferência, (ex: [nano](https://www.nano-editor.org/))
 
 ### Recomendações:
@@ -17,11 +18,11 @@ Pelo menos 6gb RAM\
 Processamento decente (sandy bridge ou mais novo)
 
 ### Instruções
-Tenha o [Git](https://git-scm.com/install/linux) e o [java 21](https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html#JSJIG-GUID-ADC9C14A-5F51-4C32-802C-9639A947317F) instalado.
+Tenha o [Git](https://git-scm.com/install/linux), o [Java 21](https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html#JSJIG-GUID-ADC9C14A-5F51-4C32-802C-9639A947317F) e o [Screen](https://wiki.debian.org/screen) instalado.
     
 debian:
 ```
-sudo apt install --no-install-recommends git openjdk-21-jdk
+sudo apt install --no-install-recommends git openjdk-21-jdk screen
 ```
         
 Em seguida, clone o repositório e acesse seu diretório.
@@ -67,9 +68,7 @@ sudo systemctl enable getty@tty4
 ```
 Para verificar, tente apertar `ctrl+alt+f4` e veja se seu usuário está logado com sucesso.
 Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tudo.
-            
 
-            
 ### Agora que a parte mais chata já foi...
 Finalmente, na pasta `paiaspack-server/Scripts (linux)/`:
 edite o script de inicialização (startserver):
@@ -85,6 +84,13 @@ sudo cp startserver /usr/bin/
 sudo cp mineserver.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable minecraft-server
+```
+E adicione isso ao fim do seu arquivo `~/.bashrc`
+```
+# iniciar screen no tty4
+if [ "$(tty)" = "/dev/tty4" ]; then
+    screen -r mine
+fi
 ```
             
 Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente, mas a conexão ainda depende de redirecionamento de portas no seu roteador (port-forwarding), e isso é bem inconveniente, já que provedores de internet nem sempre te dão o seu real endereço IPv4. Para contornar isso, podemos usar o endereço IPv6
@@ -102,13 +108,13 @@ sudo apt update
 sudo apt install playit
 ```
         
-Em seguida, copie o script de inicialização do Play It (na pasta `paiaspack-server/Scripts (linux)/`) e ative ele pelo systemd:
+Em seguida, ative o serviço de inicialização do playit e faça o setup inicial
 ```
-sudo cp startplayit.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable startplayit.service
+sudo systemctl start playit
+sudo systemctl enable playit
+playit setup
 ```
-Então, entre no site do [playit](playit.gg) e faça a configuração do serviço.
+Então, entre na url do seu terminal e faça a configuração do serviço [playit](playit.gg).
 
 ## FINALMENTE.
 Até que enfim, as configurações chegaram ao fim, agora é só mexer no servidor como quiser!
