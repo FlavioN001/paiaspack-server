@@ -70,21 +70,25 @@ Para verificar, tente apertar `ctrl+alt+f4` e veja se seu usuário está logado 
 Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tudo.
 
 ### Agora que a parte mais chata já foi...
-Finalmente, na pasta `paiaspack-server/Scripts (linux)/`:
-edite o script de inicialização (startserver):
-Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.\
+Agora, na pasta `paiaspack-server/Scripts (linux)/`:\
 
+- Edite o script de inicialização (startserver):\
+Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.\
 Em seguida, transforme ele em um executável:
 ```
 chmod +x startserver
 ```
+
+- Edite o serviço de inicialização (mineserver.service):/
+Na linha `User=`, troque `seuusuário` pelo seu usuário logado no tty4
+
             
 Finalmente, rode:
 ```
 sudo cp startserver /usr/bin/
 sudo cp mineserver.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable minecraft-server
+sudo systemctl enable mineserver
 ```
 E adicione isso ao fim do seu arquivo `~/.bashrc`
 ```
@@ -94,7 +98,7 @@ if [ "$(tty)" = "/dev/tty4" ]; then
 fi
 ```
             
-Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente, mas a conexão ainda depende de redirecionamento de portas no seu roteador (port-forwarding), e isso é bem inconveniente, já que provedores de internet nem sempre te dão o seu real endereço IPv4. Para contornar isso, podemos usar o endereço IPv6
+Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente, mas a conexão ainda depende de redirecionamento de portas no seu roteador (port-forwarding) das portas 28282 e 24454, e isso é bem inconveniente, já que provedores de internet nem sempre te dão o seu real endereço IPv4. Para contornar isso, podemos usar o endereço IPv6
 ```
 [seu endereço IPv6]:28282
 ```    
@@ -115,7 +119,11 @@ sudo systemctl start playit
 sudo systemctl enable playit
 playit setup
 ```
-Então, entre na url do seu terminal e faça a configuração do serviço [playit](playit.gg).
+Então, entre na url do seu terminal e faça a configuração do serviço [playit](playit.gg), adicionando um tunnel para a porta `28282`(para o servidor) e outro para `24454`(para o voicechat)
+
+*IMPORTANTE*
+Para o voicechat funcionar, também é necessário adicionar o ip do tunnel playit que você criou com a porta 24454 ao arquivo de configuração `Server/config/voicechat/voicechat-server.properties`
+na linha `voice_host=`
 
 ## FINALMENTE.
 Até que enfim, as configurações chegaram ao fim, agora é só mexer no servidor como quiser!
