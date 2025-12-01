@@ -72,8 +72,9 @@ Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tu
 ### Agora que a parte mais chata já foi...
 Finalmente, na pasta `paiaspack-server/Scripts (linux)/`:
 edite o script de inicialização (startserver):
-Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.
-em seguida, transforme ele em um executável:
+Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.\
+
+Em seguida, transforme ele em um executável:
 ```
 chmod +x startserver
 ```
