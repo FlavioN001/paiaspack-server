@@ -71,7 +71,7 @@ Para verificar, tente apertar `ctrl+alt+f4` e veja se seu usuário está logado 
 Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tudo.
 
 ### Agora que a parte mais chata já foi...
-Agora, na pasta `paiaspack-server/Scripts (linux)/`:\
+Agora, na pasta `paiaspack-server/Scripts (linux)/`:
 
 - Edite o script de inicialização (startserver):\
 Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.\
