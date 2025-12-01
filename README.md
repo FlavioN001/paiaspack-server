@@ -7,7 +7,7 @@
 ### Dependências:
 [Git](https://git-scm.com/install/linux)\
 [java 21](https://www.oracle.com/java/technologies/downloads/#java21)\
-[Screen](https://wiki.debian.org/screen)
+[Screen](https://wiki.debian.org/screen)\
 Editor de texto em terminal de sua preferência, (ex: [nano](https://www.nano-editor.org/))
 
 ### Recomendações:
