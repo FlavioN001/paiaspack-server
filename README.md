@@ -63,6 +63,7 @@ depois disso, salve o arquivo e saia (ctrl+o, enter, ctrl+x).
         
 Ative o serviço agora editado:
 ```
+sudo systemctl daemon-reload
 sudo systemctl restart getty@tty4
 sudo systemctl enable getty@tty4
 ```
