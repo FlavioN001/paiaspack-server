@@ -1,4 +1,4 @@
-# paiaspack-server - INDEV.
+# paiaspack-server
 
 ## modpack server-side para hostear um servidor [paia's pack](https://github.com/FlavioN001/paiaspack).
 
