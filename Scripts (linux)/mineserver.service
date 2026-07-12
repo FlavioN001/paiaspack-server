@@ -1,18 +1,15 @@
 [Unit]
-Description=Servidor de Minecraft
+Description=Servidor de Minecraft Paia's SMP
 After=network.target
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/startserver
-StandardInput=tty
-StandardOutput=tty
-StandardError=tty
-TTYPath=/dev/tty4
-TTYReset=yes
-TTYVHangup=yes
-Restart=on-failure
-RestartSec=10
+Type=forking
+User=flero
+ExecStart=/usr/bin/screen -dmS mine /usr/bin/startserver
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
+
+
