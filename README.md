@@ -126,7 +126,5 @@ Então, entre na url que aparecerá no seu terminal e faça a configuração do 
 *IMPORTANTE* \
 Para o voicechat funcionar, também é necessário adicionar o um ip de tunnel do playit que com a porta 24454 UDP ao arquivo de configuração `Server/config/voicechat/voicechat-server.properties` na linha `voice_host=`
 
-## FINALMENTE.
-Até que enfim, as configurações chegaram ao fim, agora é só mexer no servidor como quiser!
-
-Faça as alterações que quiser para
+# FINALMENTE.
+## Faça as alterações que quiser para o seu caso de uso e use até como base para seu próprio modpack
