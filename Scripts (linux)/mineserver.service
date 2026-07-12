@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=forking
-User=flero
+User=seuusuário
 ExecStart=/usr/bin/screen -dmS mine /usr/bin/startserver
 Restart=always
 RestartSec=5
