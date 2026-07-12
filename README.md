@@ -107,7 +107,7 @@ Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente,
 Entretanto, nem todos os jogadores poderão se conectar ao servidor, pois até hoje alguns provedores de internet não disponibilizam acesso à rede IPv6.
     
 A solução definitiva para isso é usar um serviço de tunneling, recomendo o [Play It](playit.gg). pela sua facilidade e bom funcionamento.\
-Instale o playit em seu computador debian:
+[Instale o playit em seu computador debian:](https://playit.gg/support/run-on-linux/)
 ```
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
