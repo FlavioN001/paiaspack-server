@@ -28,7 +28,18 @@
             "minecraft:iron_pickaxe",
             "minecraft:diamond_pickaxe",
             "minecraft:netherite_pickaxe"
-        ]
+        ],
+        "override": {
+            "cooldown": null,
+            "mustSneak": null,
+            "delay": null,
+            "maxChain": null,
+            "needCorrectTool": null,
+            "searchRadius": null,
+            "permissionRestricted": null,
+            "decreaseDurability": null,
+            "miningSpeedModifier": null
+        }
     },
     {
         "name": "Wood",
@@ -41,7 +52,6 @@
             "minecraft:dark_oak_log",
             "minecraft:mangrove_log",
             "minecraft:cherry_log",
-            "minecraft:pale_oak_log",
             "minecraft:crimson_stem",
             "minecraft:warped_stem"
         ],
@@ -52,6 +62,17 @@
             "minecraft:iron_axe",
             "minecraft:diamond_axe",
             "minecraft:netherite_axe"
-        ]
+        ],
+        "override": {
+            "cooldown": null,
+            "mustSneak": null,
+            "delay": null,
+            "maxChain": null,
+            "needCorrectTool": null,
+            "searchRadius": null,
+            "permissionRestricted": null,
+            "decreaseDurability": null,
+            "miningSpeedModifier": null
+        }
     }
 ]

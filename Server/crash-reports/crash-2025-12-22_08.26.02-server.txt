@@ -1,0 +1,310 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 2025-12-22 08:26:02
+Description: Saving entity NBT
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.class_1937.method_30349()" because the return value of "net.minecraft.class_2586.method_10997()" is null
+	at knot//net.mehvahdjukaar.moonlight.api.util.Utils.saveTileToItem(Utils.java:92)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.trades.PresentItemListing.getOffer(PresentItemListing.java:40)
+	at knot//net.minecraft.world.entity.npc.AbstractVillager.addOffersFromItemListings(AbstractVillager.java:242)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.RedMerchantEntity.updateTrades(RedMerchantEntity.java:130)
+	at knot//net.minecraft.world.entity.npc.AbstractVillager.getOffers(AbstractVillager.java:113)
+	at knot//net.minecraft.world.entity.npc.AbstractVillager.addAdditionalSaveData(AbstractVillager.java:171)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.RedMerchantEntity.addAdditionalSaveData(RedMerchantEntity.java:148)
+	at knot//net.minecraft.world.entity.Entity.saveWithoutId(Entity.java:1922)
+	at knot//net.minecraft.world.entity.Entity.saveAsPassenger(Entity.java:1858)
+	at knot//net.minecraft.world.entity.Entity.save(Entity.java:1866)
+	at knot//net.minecraft.world.level.chunk.storage.EntityStorage.lambda$storeEntities$1(EntityStorage.java:109)
+	at java.base@21.0.9/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.9/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at knot//net.minecraft.world.level.chunk.storage.EntityStorage.storeEntities(EntityStorage.java:107)
+	at knot//net.minecraft.world.level.entity.PersistentEntitySectionManager.storeChunkSections(PersistentEntitySectionManager.java:299)
+	at knot//net.minecraft.world.level.entity.PersistentEntitySectionManager.lambda$autoSave$13(PersistentEntitySectionManager.java:380)
+	at knot//it.unimi.dsi.fastutil.longs.LongOpenHashSet.forEach(LongOpenHashSet.java:762)
+	at knot//it.unimi.dsi.fastutil.longs.LongIterable.forEach(LongIterable.java:146)
+	at knot//it.unimi.dsi.fastutil.longs.AbstractLongCollection.forEach(AbstractLongCollection.java:153)
+	at knot//net.minecraft.world.level.entity.PersistentEntitySectionManager.autoSave(PersistentEntitySectionManager.java:374)
+	at knot//net.minecraft.server.level.ServerLevel.save(ServerLevel.java:825)
+	at knot//net.minecraft.server.MinecraftServer.saveAllChunks(MinecraftServer.java:556)
+	at knot//net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:580)
+	at knot//net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:924)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:697)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:281)
+	at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at knot//net.mehvahdjukaar.moonlight.api.util.Utils.saveTileToItem(Utils.java:92)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.trades.PresentItemListing.method_7246(PresentItemListing.java:40)
+	at knot//net.minecraft.class_3988.method_19170(class_3988.java:242)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.RedMerchantEntity.method_7237(RedMerchantEntity.java:130)
+	at knot//net.minecraft.class_3988.method_8264(class_3988.java:113)
+	at knot//net.minecraft.class_3988.method_5652(class_3988.java:171)
+	at knot//net.mehvahdjukaar.supplementaries.common.entities.RedMerchantEntity.method_5652(RedMerchantEntity.java:148)
+
+-- Entity being saved --
+Details:
+	Entity Type: supplementaries:red_merchant (net.mehvahdjukaar.supplementaries.common.entities.RedMerchantEntity)
+	Entity ID: 111320
+	Entity Name: Red Merchant
+	Entity's Exact location: -98.36, 64.00, -142.35
+	Entity's Block location: World: (-99,64,-143), Section: (at 13,0,1 in -7,4,-9; chunk contains blocks -112,-64,-144 to -97,319,-129), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,-64,-512 to -1,319,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at knot//net.minecraft.class_1297.method_5647(class_1297.java:1922)
+	at knot//net.minecraft.class_1297.method_5786(class_1297.java:1858)
+	at knot//net.minecraft.class_1297.method_5662(class_1297.java:1866)
+	at knot//net.minecraft.class_5565.method_31734(class_5565.java:109)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at knot//net.minecraft.class_5565.method_31760(class_5565.java:107)
+	at knot//net.minecraft.class_5579.method_31812(class_5579.java:299)
+	at knot//net.minecraft.class_5579.method_31846(class_5579.java:380)
+	at knot//it.unimi.dsi.fastutil.longs.LongOpenHashSet.forEach(LongOpenHashSet.java:762)
+	at knot//it.unimi.dsi.fastutil.longs.LongIterable.forEach(LongIterable.java:146)
+	at knot//it.unimi.dsi.fastutil.longs.AbstractLongCollection.forEach(AbstractLongCollection.java:153)
+	at knot//net.minecraft.class_5579.method_31829(class_5579.java:374)
+	at knot//net.minecraft.class_3218.method_14176(class_3218.java:825)
+	at knot//net.minecraft.server.MinecraftServer.method_3723(MinecraftServer.java:556)
+	at knot//net.minecraft.server.MinecraftServer.method_39218(MinecraftServer.java:580)
+	at knot//net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:924)
+	at knot//net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:697)
+	at knot//net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:281)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.12.57+deb13-amd64
+	Java Version: 21.0.9, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 2545750976 bytes (2427 MiB) / 5368709120 bytes (5120 MiB) up to 7516192768 bytes (7168 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz
+	Identifier: Intel64 Family 6 Model 42 Stepping 7
+	Microarchitecture: Sandy Bridge (Client)
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: 2nd Generation Core Processor Family Integrated Graphics Controller
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MiB): 256.00
+	Graphics card #0 deviceId: 0x0126
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 3915.46
+	Virtual memory used (MiB): 6790.68
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 3914.71, total: 3915.46
+	Space in storage for workdir (MiB): available: 219345.38, total: 250898.44
+	JVM Flags: 20 total; -Xms5G -Xmx7G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
+	Fabric Mods: 
+		alloy_forgery: Alloy Forgery 2.4.1+1.21
+		amendments: Amendments 1.21-2.0.8
+		antixray: AntiXray 1.4.6
+			com_moandjiezana_toml_toml4j: toml4j 0.7.2
+		appleskin: AppleSkin 3.0.6+mc1.21
+		architectury: Architectury 13.0.8
+		artifacts: Artifacts 13.1.0
+			com_electronwill_night-config_core: core 3.8.0
+			com_electronwill_night-config_toml: toml 3.8.0
+			expandability: ExpandAbility 12.0.0
+		audioplayer: AudioPlayer 1.21.1-1.13.2
+			admiral: Admiral 0.4.5+1.21
+			fabric-api-base: Fabric API Base 0.4.42+6573ed8c6a
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.28+6ced4dd96a
+		balm: Balm 21.0.55
+			kuma_api: KumaAPI 21.0.7
+		better-fabric-console: Better Fabric Console 1.2.0
+			adventure-platform-fabric: adventure-platform-fabric 5.14.1
+				net_kyori_adventure-api: adventure-api 4.17.0
+				net_kyori_adventure-key: adventure-key 4.17.0
+				net_kyori_adventure-platform-api: adventure-platform-api 4.3.3
+				net_kyori_adventure-text-logger-slf4j: adventure-text-logger-slf4j 4.17.0
+				net_kyori_adventure-text-minimessage: adventure-text-minimessage 4.17.0
+				net_kyori_adventure-text-serializer-ansi: adventure-text-serializer-ansi 4.17.0
+				net_kyori_adventure-text-serializer-gson: adventure-text-serializer-gson 4.17.0
+				net_kyori_adventure-text-serializer-json: adventure-text-serializer-json 4.17.0
+				net_kyori_adventure-text-serializer-plain: adventure-text-serializer-plain 4.17.0
+				net_kyori_ansi: ansi 1.1.0
+				net_kyori_examination-api: examination-api 1.3.0
+				net_kyori_examination-string: examination-string 1.3.0
+				net_kyori_option: option 1.0.0
+			com_typesafe_config: config 1.4.1
+			io_leangen_geantyref_geantyref: geantyref 1.3.11
+			net_fabricmc_mapping-io: mapping-io 0.6.1
+			org_fusesource_jansi_jansi: jansi 2.4.1
+			org_jline_jline: jline 3.27.0
+			org_jline_jline-terminal-jansi: jline-terminal-jansi 3.27.0
+			org_spongepowered_configurate-core: configurate-core 4.1.2
+			org_spongepowered_configurate-hocon: configurate-hocon 4.1.2
+		carryon: Carry On 2.2.2
+		collective: Collective 8.13
+		coolrain: CoolRain 1.3.0-1.21.1
+		creativecore: CreativeCore 2.13.14
+			net_neoforged_bus: bus 7.2.0
+		doubledoors: Double Doors 7.2
+		easymagic: Easy Magic 21.1.4
+		explorify: Explorify 1.6.4
+		fabric-api: Fabric API 0.116.7+1.21.1
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.71+b559734419
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.31+d527f9fd19
+			fabric-block-api-v1: Fabric Block API (v1) 1.1.0+0bc3503219
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.11+ebb2264e19
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.49+f71b366f19
+			fabric-commands-v0: Fabric Commands (v0) 0.2.66+df3654b319
+			fabric-content-registries-v0: Fabric Content Registries (v0) 8.0.19+b559734419
+			fabric-convention-tags-v1: Fabric Convention Tags 2.1.5+7f945d5b19
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.11.1+a406e79519
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.29+0af3f5a719
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.4.5+6116a37819
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 20.2.34+37516cd619
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 4.0.1+65213ef819
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.8.0+2b27e0a419
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.7.13+ba9dae0619
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.53+6ced4dd919
+			fabric-item-api-v1: Fabric Item API (v1) 11.2.0+3b3cb2e819
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.1.7+def88e3a19
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.6.0+0865547519
+			fabric-loot-api-v2: Fabric Loot API (v2) 3.0.15+3f89f5a519
+			fabric-loot-api-v3: Fabric Loot API (v3) 1.0.3+3f89f5a519
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.14+8aaf3aca19
+			fabric-networking-api-v1: Fabric Networking API (v1) 4.3.0+c7469b2119
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 15.2.1+40875a9319
+			fabric-particles-v1: Fabric Particles (v1) 4.0.2+6573ed8c19
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 5.0.15+2475392c19
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 5.3.1+e3eddc2119
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.49+73761d2e19
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.6+1daea21519
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 4.3.0+8dc279b119
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 1.3.1+5b5275af19
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.90+b559734419
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 5.4.3+c24bd99419
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.2.0+45b9699719
+		fabric-language-kotlin: Fabric Language Kotlin 1.13.7+kotlin.2.2.21
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 2.2.21
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 2.2.21
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 2.2.21
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 2.2.21
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.29.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.10.2
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.10.2
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.7.1
+			org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm: kotlinx-io-bytestring-jvm 0.8.0
+			org_jetbrains_kotlinx_kotlinx-io-core-jvm: kotlinx-io-core-jvm 0.8.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.9.0
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.9.0
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.9.0
+		fabricloader: Fabric Loader 0.18.1
+			mixinextras: MixinExtras 0.5.0
+		fallingtrees: Panda's Falling Tree's 0.13.2
+		farmersdelight: Farmer's Delight 1.21.1-3.2.2+refabricated
+			mm: Manningham Mills 2.3
+		ferritecore: FerriteCore 7.0.2-hotfix
+		forgeconfigapiport: Forge Config API Port 21.1.6
+		fzzy_config: Fzzy Config 0.7.3+1.21
+			blue_endless_jankson: jankson 1.2.3
+			fabric-permissions-api-v0: fabric-permissions-api 0.3.1
+			net_peanuuutz_tomlkt_tomlkt-jvm: tomlkt-jvm 0.3.7
+		gravestones: Gravestones 1.2.3+1.21.1+A
+		immersive_aircraft: Immersive Aircraft 1.4.1+1.21.1
+			org_mariuszgromada_math_mathparser_org-mxparser: MathParser.org-mXparser 5.2.1
+		immersive_armors: Immersive Armors 1.7.5+1.21.1
+		immersive_furniture: Immersive Furniture 0.1.2+1.21.1
+		immersive_optimization: Immersive Optimization 0.1.0
+		immersive_paintings: Immersive Paintings 0.7.4
+			com_twelvemonkeys_common_common-image: common-image 3.12.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.12.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.12.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.12.0
+		itemphysic: ItemPhysic 1.8.9
+		jamlib: JamLib 1.3.5+1.21.1
+		java: Java HotSpot(TM) 64-Bit Server VM 21
+		jei: Just Enough Items 19.25.0.325
+		lithium: Lithium 0.15.1+mc1.21.1
+		lootr: Lootr 1.21-1.10.35.92
+		man_of_many_planes: Man of Many Planes 0.2.1+1.21.1
+		minecraft: Minecraft 1.21.1
+		modernfix: ModernFix 5.25.1+mc1.21.1
+		moonlight: Moonlight Lib 1.21-2.26.6
+		mythicmetals: Mythic Metals 0.24.4+1.21
+			additionalentityattributes: Additional Entity Attributes 1.8.0+1.21
+			common-protection-api: Common Protection API 1.0.0
+		owo: oωo 0.12.11+1.21
+			io_wispforest_endec: endec 0.1.5
+			io_wispforest_endec_gson: gson 0.1.3
+			io_wispforest_endec_jankson: jankson 0.1.3
+			io_wispforest_endec_netty: netty 0.1.2
+		pandalib: PandaLib 0.5.2
+		pneumonocore: PneumonoCore 1.21.1
+		puzzleslib: Puzzles Lib 21.1.39
+		rightclickharvest: Right Click Harvest 4.6.0+1.21.1
+		scalablelux: ScalableLux 0.1.0.1+fabric.d0d58ab
+		silk-all: Silk (All modules) 1.10.7
+			silk-commands: Silk Commands 1.10.7
+			silk-core: Silk Core 1.10.7
+			silk-game: Silk Game 1.10.7
+			silk-igui: Silk Inventory GUI 1.10.7
+			silk-nbt: Silk NBT 1.10.7
+			silk-network: Silk Network 1.10.7
+			silk-persistence: Silk Persistence 1.10.7
+		simplyswords: Simply Swords 1.62.0-1.21.1
+		skinrestorer: SkinRestorer 2.4.3+1.21-fabric
+			org_mineskin_java-client: java-client 3.0.6-SNAPSHOT
+		smallships: Small Ships 2.0.0-b2.1
+		sophisticatedcore: Sophisticated Core 1.21.1-1.2.9.20.164
+			porting_lib_conditions: Porting Lib Conditions 3.1.0-beta.47+1.21.1
+			porting_lib_core: Porting Lib Core 3.1.0-beta.47+1.21.1
+			porting_lib_fluids: Porting Lib Fluids 3.1.0-beta.47+1.21.1
+			porting_lib_item_abilities: Porting Lib Item Abilities 3.1.0-beta.47+1.21.1
+			porting_lib_lazy_registration: Porting Lib Lazy Register 3.1.0-beta.47+1.21.1
+			porting_lib_level_events: Porting Lib Level Events 3.1.0-beta.47+1.21.1
+			porting_lib_loot: Porting Lib Loot 3.1.0-beta.47+1.21.1
+			porting_lib_model_loader: Porting Lib Model Loader 3.1.0-beta.47+1.21.1
+			porting_lib_render_types: Porting Lib Render Types 3.1.0-beta.47+1.21.1
+			porting_lib_transfer: Porting Lib Transfer 3.1.0-beta.47+1.21.1
+			team_reborn_energy: Energy 4.1.0
+		sophisticatedstorage: Sophisticated Storage 1.21.1-1.3.7.8.135
+		suikefoxfriend: Fox Friend 3.4.1
+		supplementaries: Supplementaries 1.21-3.4.20
+			mixinsquared: MixinSquared 0.1.1
+		toms_storage: Tom's Simple Storage Mod 2.2.2
+			cardinal-components-block: Cardinal Components API (blocks) 6.1.0
+			cloth-config: Cloth Config v15 15.0.127
+				cloth-basic-math: cloth-basic-math 0.6.1
+		trade_cycling: Trade Cycling 1.21.1-1.0.18
+		travelersbackpack: Traveler's Backpack 10.1.27
+		trinkets: Trinkets 3.10.0
+			cardinal-components-base: Cardinal Components API (base) 6.1.0
+			cardinal-components-entity: Cardinal Components API (entities) 6.1.0
+		veinminer: Veinminer 2.4.2
+			de_miraculixx_core_dev: core 2.4.2
+		veinminer-enchantment: Veinminer Enchantment 2.5.0
+		villagerleads: VillagerLeads 0.0.3
+		voicechat: Simple Voice Chat 1.21.1-2.6.6
+			voicechat_api: Simple Voice Chat API 2.6.0
+		waystones: Waystones 21.1.24
+		xercamusic: Music Maker Mod 1.21.1-1.0.1
+	Server Running: true
+	Player Count: 1 / 20; [class_3222['FOX___001'/111316, l='ServerLevel[Paia's SMP - teste]', x=-108.90, y=113.12, z=-142.70]]
+	Active Data Packs: vanilla, fabric, additionalentityattributes, alloy_forgery, amendments, artifacts, audioplayer, balm (incompatible), carryon (incompatible), collective, coolrain, easymagic (incompatible), explorify, fabric-convention-tags-v2, farmersdelight, gravestones, immersive_aircraft, immersive_armors, immersive_furniture, immersive_paintings, lootr, man_of_many_planes, moonlight, mythicmetals, porting_lib_item_abilities, rightclickharvest, simplyswords, smallships, sophisticatedcore (incompatible), sophisticatedstorage (incompatible), supplementaries, toms_storage, travelersbackpack, trinkets, veinminer-enchantment, waystones (incompatible), xercamusic, supplementaries:generated_pack
+	Available Data Packs: additionalentityattributes, alloy_forgery, amendments, artifacts, audioplayer, balm (incompatible), bundle, carryon (incompatible), collective, coolrain, easymagic (incompatible), explorify, fabric, fabric-convention-tags-v2, farmersdelight, gravestones, immersive_aircraft, immersive_armors, immersive_furniture, immersive_paintings, lootr, man_of_many_planes, moonlight, mythicmetals, porting_lib_item_abilities, rightclickharvest, simplyswords, smallships, sophisticatedcore (incompatible), sophisticatedstorage (incompatible), supplementaries, supplementaries:generated_pack, toms_storage, trade_rebalance, travelersbackpack, trinkets, vanilla, veinminer-enchantment, waystones (incompatible), xercamusic
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 571837641776707370
+	Is Modded: Definitely; Server brand changed to 'fabric'
+	Type: Dedicated Server (map_server.txt)

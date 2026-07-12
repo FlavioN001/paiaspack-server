@@ -62,6 +62,8 @@
 		"preventMultiplePlayersAccess": false,
 		// Backpack immune to any damage source (lava, fire), can't be destroyed, never disappears as floating item
 		"invulnerableBackpack": true,
+		// Allows swapping tools between tool slots and the player’s inventory via a quick-swap menu
+		"allowToolSwapping": true,
 		// List of items that can be put in tool slots (Use registry names, for example: minecraft:apple, minecraft:flint)
 		"toolSlotsAcceptableItems": [],
 		// List of items that can't be put in backpack inventory (Use registry names, for example: minecraft:apple, minecraft:flint)
@@ -83,6 +85,7 @@
 		"backSlotIntegration": true
 	},
 	"backpackUpgrades": {
+		"enableSleepingBag": true,
 		"enableTanksUpgrade": true,
 		"enableCraftingUpgrade": true,
 		"enableFurnaceUpgrade": true,
@@ -117,7 +120,8 @@
 			"enableUpgrade": true,
 			"filterSlotCount": 9,
 			"slotsInRow": 3
-		}
+		},
+		"enableLanternUpgrade": true
 	},
 	"world": {
 		// Enables backpacks spawning in loot chests
@@ -252,6 +256,20 @@
 		"slownessPerExcessedBackpack": 1
 	},
 	"client": {
+		"toolsOverlay": {
+			// If true, the currently held item will be swapped with the selected tool belt slot when closing the tool belt GUI
+			"swapOnClose": true,
+			// Displays the full tooltip when hovering over an item in the tool belt. If false, only the item name is shown
+			"showTooltip": false,
+			// Render backpack icon in the center of the tools overlay
+			"renderBackpackIconInCenter": true,
+			// Overlay opacity
+			"opacity": 0.75,
+			// X offset
+			"offsetX": 0,
+			// Y offset
+			"offsetY": 0
+		},
 		"overlay": {
 			// Enables tanks and tool slots overlay, while backpack is worn
 			"enableOverlay": true,
@@ -264,9 +282,9 @@
 		"showBackpackIconInInventory": true,
 		// Sends a message to the player on death with backpack coordinates
 		"sendBackpackCoordinatesMessage": true,
-		// Enables tool cycling via keybind (Default Z) + scroll combination, while backpack is worn
+		// Depreciated - see allowToolSwapping instead
 		"enableToolCycling": true,
-		// Allows tool cycling using keybinding only (Default Z)
+		// Depreciated
 		"disableScrollWheel": false,
 		// Enables tip, how to obtain a backpack, if there's no crafting recipe for it
 		"obtainTips": true,
