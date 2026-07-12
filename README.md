@@ -1,8 +1,8 @@
 # paiaspack-server
 
-## modpack server-side para hostear um servidor [paia's pack](https://github.com/FlavioN001/paiaspack).
+## modpack server-side para hostear um servidor [Paia's Pack](https://github.com/FlavioN001/paiaspack) gratuitamente e até com CGNAT.
 
-### O ideal é usar isso no [debian](https://www.debian.org/), já que é o que eu usei e é um sistema estável para servidores, mas não é impossível fazer isso em qualquer outra distro linux, desde que você saiba o que está fazendo.
+### O ideal é usar isso no [debian](https://www.debian.org/), pois é o que eu usei e é um sistema estável para servidores, mas não é impossível fazer isso em qualquer outra distro linux, desde que você saiba o que está fazendo.
 
 ### Dependências:
 [Git](https://git-scm.com/install/linux)\
@@ -34,13 +34,13 @@ Depois, copie a pasta "Server" para o um diretório de sua escolha, ex: "~/Proje
 ```
 cp -r Server/ ~/diretório/de/sua/escolha/
 ```
-        
-        
+
+
 ### Automação
 
-agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, mas relaxa, não é nada muito complicado.\
-A meta é ligar o computador e o servidor iniciar sem nenhuma dor de cabeça ou execução de comandos.\
-Para isso, devemos iniciar uma sessão automaticamente em um outro tty. Isso é possível a partir da edição do serviço getty@tty4 (usarei o 4 pois é comum estar sem uso), desta forma:
+Agora, para automatizar a execução do servidor, será necessária a adaptação dos scripts, nada muito complicado.\
+A meta é ligar o computador e o servidor iniciar sozinho de fundo.\
+Para isso, deve-se iniciar uma sessão automaticamente em um outro tty. Isso é possível a partir da edição do serviço getty@tty4 (tty4 por ser raramente usado), desta forma:
 ```
 sudo systemctl edit getty@tty4
 ```
@@ -59,7 +59,7 @@ ExecStart=-/sbin/agetty --autologin seuusuario --noclear %I 38400 linux
 O resultado deve ser algo parecido com isso:
 ![Exemplo do getty@tty4 depois da edição](/assets/tty4after.png)
         
-depois disso, salve o arquivo e saia (ctrl+o, enter, ctrl+x).
+Depois disso, salve o arquivo e saia (ctrl+o, enter, ctrl+x).
         
 Ative o serviço agora editado:
 ```
@@ -67,13 +67,13 @@ sudo systemctl daemon-reload
 sudo systemctl restart getty@tty4
 sudo systemctl enable getty@tty4
 ```
-Para verificar, tente apertar `ctrl+alt+f4` e veja se seu usuário está logado com sucesso.
-Caso algo esteja errado, tente analisar novamente o passo a passo e verifique tudo.
+Para verificar, tente apertar `ctrl+alt+f4` e vefrifique se seu usuário está logado. \
+Caso não, analise o passo a passo e verifique o que foi feito errado.
 
-### Agora que a parte mais chata já foi...
-Agora, na pasta `paiaspack-server/Scripts (linux)/`:
+## Com isso fora do caminho:
+- Abra a pasta clonada `paiaspack-server/Scripts\ (linux)/`:
 
-- Edite o script de inicialização (startserver):\
+- Edite o script de inicialização `startserver`:\
 Na linha `cd DIRETÓRIO/DO/SERVIDOR`, substitua o diretório pelo caminho da pasta `Server/` que você guardou.\
 Em seguida, transforme ele em um executável:
 ```
@@ -93,11 +93,12 @@ sudo systemctl enable mineserver
 ```
 E adicione isso ao fim do seu arquivo `~/.bashrc`
 ```
-# iniciar screen no tty4
+#SCREEN NO TTY4
 if [ "$(tty)" = "/dev/tty4" ]; then
-    screen -r mine
+        screen -r mine
 fi
 ```
+Isso fará o terminal do servidor abra ao entrar no tty4.\
             
 Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente, mas a conexão ainda depende de redirecionamento de portas no seu roteador (port-forwarding) das portas 28282 e 24454, e isso é bem inconveniente, já que provedores de internet nem sempre te dão o seu real endereço IPv4. Para contornar isso, podemos usar o endereço IPv6
 ```
@@ -105,7 +106,7 @@ Agora, ao reiniciar seu computador, o servidor já deve iniciar automaticamente,
 ```    
 Entretanto, nem todos os jogadores poderão se conectar ao servidor, pois até hoje alguns provedores de internet não disponibilizam acesso à rede IPv6.
     
-A solução definitiva para isso é usar um serviço de tunneling, eu usarei o [Play It](playit.gg).\
+A solução definitiva para isso é usar um serviço de tunneling, recomendo o [Play It](playit.gg). pela sua facilidade e bom funcionamento.\
 Instale o playit em seu computador debian:
 ```
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
@@ -123,8 +124,9 @@ playit setup
 Então, entre na url que aparecerá no seu terminal e faça a configuração do serviço [playit](playit.gg), adicionando um tunnel para a porta `28282`(para o servidor) e outro para `24454`(para o voicechat)
 
 *IMPORTANTE* \
-Para o voicechat funcionar, também é necessário adicionar o ip do tunnel playit que você criou com a porta 24454 ao arquivo de configuração `Server/config/voicechat/voicechat-server.properties`
-na linha `voice_host=`
+Para o voicechat funcionar, também é necessário adicionar o um ip de tunnel do playit que com a porta 24454 UDP ao arquivo de configuração `Server/config/voicechat/voicechat-server.properties` na linha `voice_host=`
 
 ## FINALMENTE.
 Até que enfim, as configurações chegaram ao fim, agora é só mexer no servidor como quiser!
+
+Faça as alterações que quiser para
