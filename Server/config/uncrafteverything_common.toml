@@ -1,0 +1,47 @@
+[Experience]
+	#The type of experience to be used.
+	#[LEVEL/POINT]
+	experienceType = "LEVEL"
+	#The default amount of experience point/level required to uncraft an item. More detailed exp can be configured in uncrafteverything-exp.json
+	experiences = 1
+
+[Restrictions]
+	#The type of restriction to be used.
+	#[BLACKLIST/WHITELIST]
+	restrictionType = "BLACKLIST"
+	#A list of items that can/cannot be uncrafted depending on type of restriction.
+	#Invalid input will cause config reset at runtime.
+	#Format: modid:item_name / modid:* / modid:*_glass / modid:black_* / modid:red_*_glass / modid:red_*_glass* / #modid:item_tag_name
+	#Press F3 + h in game and hover item to check their modid:name
+	restrictions = ["uncrafteverything:uncrafting_table", "minecraft:crafting_table"]
+
+[AllowEnchantedItems]
+	#Allow uncrafting of enchanted items. [true/false]
+	allowEnchantedItems = true
+
+[AllowUnSmithing]
+	#Allow uncrafting of items that obtained from smithing (Trimmed Armor/Netherite Armor). [true/false]
+	allowUnSmithing = true
+
+[AllowDamaged]
+	#Allow uncrafting of damaged items. [true/false]
+	allowDamaged = true
+
+[PreventModdedIngredientsFromVanillaItems]
+	#Prevents vanilla items (e.g., iron axe) from being uncrafted using modded recipes. This helps avoid potential duplication or unintended outputs caused by modded ingredients. [true/false]
+	preventModdedIngredientsFromVanillaItems = true
+
+[RestrictedModIngredients]
+	#A list of modid that would be excluded when uncrafting, to prevent too much recipes and causing performance issues. 
+	#Format: modid
+	restrictedModIngredients = ["productivetrees", "chipped"]
+
+[FTBQuestProgression]
+	#Enable progression based uncrafting recipe search (Only available when FTB Quests is added to the mod pack)
+	enableProgression = false
+	#When FTB Quests is added and progression enabled, only item defined in progression config able to uncraft, all other item will be disabled.
+	onlyAllowDefinedProgression = false
+
+[OutputEnchantedBook]
+	#Output Enchanted Book for enchanted item. [true/false]
+	outputEnchantedBook = false

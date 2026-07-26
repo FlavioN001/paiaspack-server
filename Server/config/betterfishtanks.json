@@ -1,0 +1,21 @@
+{
+  "general": {
+    "requireFood": true,
+    "waterDisplayUnit": "PERCENT",
+    "useEntityWaterRendering": false
+  },
+  "mob": {
+    "allowDrownedCapture": false,
+    "allowGuardianCapture": false,
+    "allowWhaleCapture": false,
+    "allowFishHunting": true,
+    "allowPufferfishPuffing": true,
+    "customCatchableEntitiesByTag": [
+      "example:dummy_entity"
+    ],
+    "customCatchableEntitiesByName": [
+      "dummy_shark"
+    ],
+    "blacklistedEntitiesByName": []
+  }
+}

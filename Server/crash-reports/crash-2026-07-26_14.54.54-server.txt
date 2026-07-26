@@ -1,0 +1,429 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 2026-07-26 14:54:54
+Description: Exception ticking world
+
+java.lang.RuntimeException: Mixin transformation of net.minecraft.class_1675 failed
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base@21.0.11/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.mixinextras$bridge$method_18812$24(AbstractSkeleton.java)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.wrapOperation$cko001$kilt$tryGetHandWithCrossbow(AbstractSkeleton.java:532)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.reassessWeaponGoal(AbstractSkeleton.java:178)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.setItemSlot(AbstractSkeleton.java:236)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.populateDefaultEquipmentSlots(AbstractSkeleton.java:141)
+	at knot//net.minecraft.world.entity.monster.AbstractSkeleton.finalizeSpawn(AbstractSkeleton.java:150)
+	at knot//net.neoforged.neoforge.event.EventHooks.finalizeMobSpawn(EventHooks.java:337)
+	at knot//net.minecraft.world.level.NaturalSpawner.spawnCategoryForPosition(NaturalSpawner.java:294)
+	at knot//net.minecraft.world.level.NaturalSpawner.spawnCategoryForChunk(NaturalSpawner.java:211)
+	at knot//net.minecraft.world.level.NaturalSpawner.spawnForChunk(NaturalSpawner.java:199)
+	at knot//net.minecraft.server.level.ServerChunkCache.tickChunks(ServerChunkCache.java:362)
+	at knot//net.minecraft.server.level.ServerChunkCache.tick(ServerChunkCache.java:310)
+	at knot//net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:350)
+	at knot//net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1021)
+	at knot//net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:299)
+	at knot//net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:912)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:697)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:281)
+	at java.base@21.0.11/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:380)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:237)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:435)
+	... 23 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Callback method create$interactWithEntitiesOnContraptions(Lnet/minecraft/class_1297;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z in create.mixins.json:ProjectileUtilMixin from mod create failed injection check, (0/1) succeeded. Scanned 0 target(s). No refMap loaded.
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.postInject(InjectionInfo.java:531)
+	at knot//com.llamalad7.mixinextras.injector.MixinExtrasLateInjectionInfo.latePostInject(MixinExtrasLateInjectionInfo.java:57)
+	at knot//com.llamalad7.mixinextras.injector.LateInjectionApplicatorExtension.postApply(LateInjectionApplicatorExtension.java:43)
+	at org.spongepowered.asm.mixin.transformer.ext.Extensions.postApply(Extensions.java:167)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.postApply(TargetClassContext.java:448)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:420)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+	... 26 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at knot//net.minecraft.class_1547.mixinextras$bridge$method_18812$24(class_1547.java)
+	at knot//net.minecraft.class_1547.wrapOperation$cko001$kilt$tryGetHandWithCrossbow(class_1547.java:532)
+	at knot//net.minecraft.class_1547.method_6997(class_1547.java:178)
+	at knot//net.minecraft.class_1547.method_5673(class_1547.java:236)
+	at knot//net.minecraft.class_1547.method_5964(class_1547.java:141)
+	at knot//net.minecraft.class_1547.method_5943(class_1547.java:150)
+	at knot//net.neoforged.neoforge.event.EventHooks.finalizeMobSpawn(EventHooks.java:337)
+	at knot//net.minecraft.class_1948.method_24930(class_1948.java:294)
+	at knot//net.minecraft.class_1948.method_8663(class_1948.java:211)
+	at knot//net.minecraft.class_1948.method_27821(class_1948.java:199)
+	at knot//net.minecraft.class_3215.method_14161(class_3215.java:362)
+	at knot//net.minecraft.class_3215.method_12127(class_3215.java:310)
+
+-- Affected level --
+Details:
+	All players: 1 total; [class_3222['Flero114'/7, l='ServerLevel[Paia's SMP - teste]', x=76.61, y=56.06, z=501.45]]
+	Chunk stats: 1926
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,68,0), Section: (at 0,4,0 in 0,4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 250143831 game time, 252512130 day time
+	Level name: Paia's SMP - teste
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Commands: true
+	Level weather: Rain time: 19757 (now: false), thunder time: 31018 (now: false)
+	Known server brands: fabric, fabric + kilt
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 69
+Stacktrace:
+	at knot//net.minecraft.class_3218.method_8538(class_3218.java:1693)
+	at knot//net.minecraft.server.MinecraftServer.method_3813(MinecraftServer.java:1024)
+	at knot//net.minecraft.class_3176.method_3813(class_3176.java:299)
+	at knot//net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:912)
+	at knot//net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:697)
+	at knot//net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:281)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.18.36-1-lts
+	Java Version: 21.0.11, Arch Linux
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Arch Linux
+	Memory: 127188200 bytes (121 MiB) / 1509949440 bytes (1440 MiB) up to 5196742656 bytes (4956 MiB)
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 5500U with Radeon Graphics
+	Identifier: AuthenticAMD Family 23 Model 104 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Lucienne
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. [AMD/ATI] (0x1002)
+	Graphics card #0 VRAM (MiB): 258.00
+	Graphics card #0 deviceId: 0x164c
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 19810.32
+	Virtual memory used (MiB): 17954.88
+	Swap memory total (MiB): 9905.00
+	Swap memory used (MiB): 2395.12
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 9873.60, total: 9905.32
+	Space in storage for workdir (MiB): available: 26471.25, total: 238271.34
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		alloy_forgery: Alloy Forgery 2.4.1+1.21
+		amendments: Amendments 1.21-2.1.1
+		antixray: AntiXray 1.4.8
+			com_moandjiezana_toml_toml4j: toml4j 0.7.2
+		appleskin: AppleSkin 3.0.6+mc1.21
+		architectury: Architectury 13.0.8
+		artifacts: Artifacts 13.2.1
+			expandability: ExpandAbility 12.0.0
+		audioplayer: AudioPlayer 1.21.1-1.13.2
+			admiral: Admiral 0.4.5+1.21
+			fabric-api-base: Fabric API Base 0.4.42+6573ed8c6a
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.28+6ced4dd96a
+		balm: Balm 21.0.59
+			kuma_api: KumaAPI 21.0.8
+		better-fabric-console: Better Fabric Console 1.2.0
+			adventure-platform-fabric: adventure-platform-fabric 5.14.1
+				net_kyori_adventure-api: adventure-api 4.17.0
+				net_kyori_adventure-key: adventure-key 4.17.0
+				net_kyori_adventure-platform-api: adventure-platform-api 4.3.3
+				net_kyori_adventure-text-logger-slf4j: adventure-text-logger-slf4j 4.17.0
+				net_kyori_adventure-text-minimessage: adventure-text-minimessage 4.17.0
+				net_kyori_adventure-text-serializer-ansi: adventure-text-serializer-ansi 4.17.0
+				net_kyori_adventure-text-serializer-gson: adventure-text-serializer-gson 4.17.0
+				net_kyori_adventure-text-serializer-json: adventure-text-serializer-json 4.17.0
+				net_kyori_adventure-text-serializer-plain: adventure-text-serializer-plain 4.17.0
+				net_kyori_ansi: ansi 1.1.0
+				net_kyori_examination-api: examination-api 1.3.0
+				net_kyori_examination-string: examination-string 1.3.0
+				net_kyori_option: option 1.0.0
+			com_typesafe_config: config 1.4.1
+			io_leangen_geantyref_geantyref: geantyref 1.3.11
+			net_fabricmc_mapping-io: mapping-io 0.6.1
+			org_fusesource_jansi_jansi: jansi 2.4.1
+			org_jline_jline: jline 3.27.0
+			org_jline_jline-terminal-jansi: jline-terminal-jansi 3.27.0
+			org_spongepowered_configurate-core: configurate-core 4.1.2
+			org_spongepowered_configurate-hocon: configurate-hocon 4.1.2
+		betterfishtanks: Better Fishtanks 1.2.1.2-1.21.1
+		cardinal-components: Cardinal Components API 6.1.3
+			cardinal-components-base: Cardinal Components API (base) 6.1.3
+			cardinal-components-block: Cardinal Components API (blocks) 6.1.3
+			cardinal-components-chunk: Cardinal Components API (chunks) 6.1.3
+			cardinal-components-entity: Cardinal Components API (entities) 6.1.3
+			cardinal-components-item: Cardinal Components API (items) 6.1.3
+			cardinal-components-level: Cardinal Components API (world saves) 6.1.3
+			cardinal-components-scoreboard: Cardinal Components API (scoreboard) 6.1.3
+			cardinal-components-world: Cardinal Components API (worlds) 6.1.3
+		carryon: Carry On 2.2.4
+		chunkactivitytracker: Chunk Activity Tracker 1.0.1
+		cicada: CICADA 0.14.3+1.21-1.21.1
+			org_yaml_snakeyaml: snakeyaml 2.2
+		civilian_aviation: Civilian Aviation 1.0
+		cloth-config: Cloth Config v15 15.0.140
+			cloth-basic-math: cloth-basic-math 0.6.1
+		collective: Collective 8.32
+		coolrain: CoolRain 1.4.0-1.21.1
+			midnightlib: MidnightLib 1.9.2
+		creativecore: CreativeCore 2.13.39
+		deimos: Deimos 2.7
+		does_it_tick: Does It Tick? 1.1.4
+		doubledoors: Double Doors 7.2
+		easymagic: Easy Magic 21.1.4
+		elytraslot: Elytra Slot 9.0.1+1.21.1
+		explorify: Explorify 1.6.5
+		extra_trinkets: Extra Trinkets 1.8
+		fabric-api: Fabric API 0.116.14+1.21.1
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.72+7b3d111d19
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.31+d527f9fd19
+			fabric-block-api-v1: Fabric Block API (v1) 1.1.0+0bc3503219
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.11+ebb2264e19
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.49+f71b366f19
+			fabric-commands-v0: Fabric Commands (v0) 0.2.66+df3654b319
+			fabric-content-registries-v0: Fabric Content Registries (v0) 8.0.19+b559734419
+			fabric-convention-tags-v1: Fabric Convention Tags 2.1.7+7f945d5b19
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.12.0+c3656daa19
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.29+0af3f5a719
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.4.7+5b36e0f719
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 20.3.0+1eb36c0719
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 4.0.1+65213ef819
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.8.0+2b27e0a419
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.7.14+ba9dae0619
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.53+6ced4dd919
+			fabric-item-api-v1: Fabric Item API (v1) 11.2.0+3b3cb2e819
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.1.7+def88e3a19
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.6.0+0865547519
+			fabric-loot-api-v2: Fabric Loot API (v2) 3.0.15+3f89f5a519
+			fabric-loot-api-v3: Fabric Loot API (v3) 1.0.3+3f89f5a519
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.14+8aaf3aca19
+			fabric-networking-api-v1: Fabric Networking API (v1) 4.3.1+d30f6a7919
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 15.2.1+40875a9319
+			fabric-particles-v1: Fabric Particles (v1) 4.0.2+6573ed8c19
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 5.0.16+2475392c19
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 5.3.2+e3eddc2119
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.49+73761d2e19
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.6+1daea21519
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 4.3.0+8dc279b119
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 1.3.1+5b5275af19
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.91+b559734419
+			fabric-tag-api-v1: Fabric Tag API (v1) 1.3.0+1eb36c0719
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 5.4.4+7b3d111d19
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.2.0+45b9699719
+		fabric-language-kotlin: Fabric Language Kotlin 1.13.12+kotlin.2.4.0
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 2.4.0
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 2.4.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 2.4.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 2.4.0
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.33.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.11.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.11.0
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.8.0
+			org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm: kotlinx-io-bytestring-jvm 0.9.0
+			org_jetbrains_kotlinx_kotlinx-io-core-jvm: kotlinx-io-core-jvm 0.9.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.11.0
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.11.0
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.11.0
+		fabricloader: Fabric Loader 0.19.3
+			mixinextras: MixinExtras 0.5.4
+		fallingtrees: Panda's Falling Trees 0.14.0
+		farmersdelight: Farmer's Delight 1.21.1-3.3.3+refabricated
+		ferritecore: FerriteCore 7.0.3
+		forgeconfigapiport: Forge Config API Port 21.1.6
+		fzzy_config: Fzzy Config 0.7.6+1.21
+			net_peanuuutz_tomlkt_tomlkt-jvm: tomlkt-jvm 0.3.7
+		gravestones: Gravestones 1.4.1
+		immersive_aircraft: Immersive Aircraft 1.4.6+1.21.1
+			org_mariuszgromada_math_mathparser_org-mxparser: MathParser.org-mXparser 5.2.1
+		immersive_armors: Immersive Armors 1.7.6+1.21.1
+		immersive_furniture: Immersive Furniture 0.2.2+1.21.1
+		immersive_optimization: Immersive Optimization 0.1.6
+		immersive_paintings: Immersive Paintings 0.7.8
+			com_twelvemonkeys_common_common-image: common-image 3.12.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.12.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.12.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.12.0
+		itemphysic: ItemPhysic 1.8.13
+		jamlib: JamLib 1.3.6+1.21.1
+			blue_endless_jankson: jankson 1.2.3
+		java: OpenJDK 64-Bit Server VM 21
+		jei: Just Enough Items 19.27.0.343
+		kilt: Kilt 21.1.9
+			asmfabricloader: AsmFabricLoader 2.1.1-SNAPSHOT
+				net_lenni0451_classtransform_core: core 1.14.1
+				net_lenni0451_reflect: Reflect 1.6.2
+			com_github_fabriccompatibilitylayers_cursedmixinex3b449d60b1a522: CursedMixinExtensions 1.1.0
+			com_moulberry_mixinconstraints: mixinconstraints 1.0.8
+			commons-codec_commons-codec: commons-codec 1.15
+			cpw_mods_securejarhandler: securejarhandler fabric.0
+			kilt_create_compat: Kilt: Create Fabric Compat 1.0.0
+			kilt_fabric_compat: Kilt: Fabric Mods Compat 1.0.0
+			kilt_forge_compat: Kilt: Forge Mods Compat 1.0.0
+			kilt_neoforge_config: Kilt: NeoForge Config API 8.1.0
+			kilt_transfer_compat: Kilt: Transfer API Compat 1.0.0
+			knit-loader: Knit Loader 0.1.0
+			mixinsquared: MixinSquared 0.3.3
+			mm_kilt: Manningham Mills - Kilt Edition 2.5.3
+			net_fabricmc_tiny-mappings-parser: tiny-mappings-parser 0.3.0+build.17
+			net_jodah_typetools: typetools 0.6.3
+			net_minecrell_terminalconsoleappender: terminalconsoleappender 1.3.0
+			net_neoforged_bus: bus 8.0.5
+			net_neoforged_mergetool: mergetool 2.0.0
+			org_apache_maven_maven-artifact: maven-artifact 3.8.5
+			org_jline_jline-reader: jline-reader 3.12.1
+			org_openjdk_nashorn_nashorn-core: nashorn-core 15.4
+			porting_lib_attributes: Porting Lib Attributes 3.1.0-beta.87+1.21.1
+			porting_lib_base: Porting Lib Base 3.1.0-beta.87+1.21.1
+			porting_lib_blocks: Porting Lib Blocks 3.1.0-beta.87+1.21.1
+			porting_lib_brewing: Porting Lib Brewing 3.1.0-beta.87+1.21.1
+			porting_lib_chunk_loading: Porting Lib Chunk Loading 3.1.0-beta.87+1.21.1
+			porting_lib_client_events: Porting Lib Client Events 3.1.0-beta.87+1.21.1
+				mm: Manningham Mills 2.3
+			porting_lib_client_extensions: Porting Lib Client Extensions 3.1.0-beta.87+1.21.1
+			porting_lib_common: Porting Lib Common 3.1.0-beta.87+1.21.1
+			porting_lib_config: Porting Lib Config 3.1.0-beta.87+1.21.1
+			porting_lib_core: Porting Lib Core 3.1.0-beta.87+1.21.1
+			porting_lib_data: Porting Lib Data 3.1.0-beta.87+1.21.1
+			porting_lib_entity: Porting Lib Entity 3.1.0-beta.87+1.21.1
+			porting_lib_entity_data_serializers: Porting Lib Entity Data Serializers 3.1.0-beta.87+1.21.1
+			porting_lib_fluids: Porting Lib Fluids 3.1.0-beta.87+1.21.1
+			porting_lib_gametest: Porting Lib GameTest 3.1.0-beta.87+1.21.1
+			porting_lib_gui_utils: Porting Lib Gui Utils 3.1.0-beta.87+1.21.1
+			porting_lib_item_abilities: Porting Lib Item Abilities 3.1.0-beta.87+1.21.1
+			porting_lib_items: Porting Lib Items 3.1.0-beta.87+1.21.1
+			porting_lib_level_events: Porting Lib Level Events 3.1.0-beta.87+1.21.1
+			porting_lib_loot: Porting Lib Loot 3.1.0-beta.87+1.21.1
+			porting_lib_milk: Porting Lib Milk 3.1.0-beta.87+1.21.1
+			porting_lib_mixin_extensions: Porting Lib Mixin Extensions 3.1.0-beta.87+1.21.1
+			porting_lib_model_data: Porting Lib Model Data 3.1.0-beta.87+1.21.1
+			porting_lib_model_loader: Porting Lib Model Loader 3.1.0-beta.87+1.21.1
+			porting_lib_models: Porting Lib Models 3.1.0-beta.87+1.21.1
+			porting_lib_obj_loader: Porting Lib Obj Loader 3.1.0-beta.87+1.21.1
+			porting_lib_recipe_book_categories: Porting Lib Recipe Book Categories 3.1.0-beta.87+1.21.1
+			porting_lib_registry: Porting Lib Registry 3.1.0-beta.87+1.21.1
+			porting_lib_render_types: Porting Lib Render Types 3.1.0-beta.87+1.21.1
+			porting_lib_resources: Porting Lib Resources 3.1.0-beta.87+1.21.1
+			porting_lib_tags: Porting Lib Tags 3.0
+			porting_lib_transfer: Porting Lib Transfer 3.1.0-beta.87+1.21.1
+			xyz_bluspring_autorenamingtool: AutoRenamingTool 0.1.54
+			xyz_bluspring_srgutils: srgutils 0.5.15
+		lithium: Lithium 0.15.3+mc1.21.1
+		lootr: Lootr 1.21.1-1.11.37.120
+		man_of_many_planes: Man of Many Planes 0.2.1+1.21.1
+		mcwbridges: Macaw's Bridges 3.1.2
+		mcwdoors: Macaw's Doors 1.1.5
+		mcwfences: Macaw's Fences and Walls 1.2.1
+		mcwfurnitures: Macaw's Furniture 3.4.1
+		mcwlights: Macaw's Lights and Lamps 1.1.5
+		mcwpaintings: Macaw's Paintings 1.1.0
+		mcwpaths: Macaw's Paths and Pavings 1.1.2
+		mcwroofs: Macaw's Roofs 2.3.2
+		mcwstairs: Macaw's Stairs and Balconies 1.0.2
+		mcwtrpdoors: Macaw's Trapdoors 1.1.5
+		mcwwindows: Macaw's Windows 2.4.2
+		minecraft: Minecraft 1.21.1
+		mint_lib: MINT Lib 0.4.0+1.21.1+Fabric
+		modernfix: ModernFix 5.25.1+mc1.21.1
+		monolib: MonoLib 4.0.2
+		moonlight: Moonlight Lib 1.21.1-3.0.19
+		more_engines: Immersive Aircraft: Better Engines 3.0.2
+		more_useful_copper: More Useful Copper 3.0.0
+		mr_craft_musicdiscs: Craft Music Discs 1-v.1.1.0
+		mythicmetals: Mythic Metals 0.24.6+1.21
+			additionalentityattributes: Additional Entity Attributes 1.8.0+1.21
+			common-protection-api: Common Protection API 1.0.0
+		owo: oωo 0.12.15.4+1.21
+			io_wispforest_endec: endec 0.1.5.1
+			io_wispforest_endec_gson: gson 0.1.3.1
+			io_wispforest_endec_jankson: jankson 0.1.3.1
+			io_wispforest_endec_netty: netty 0.1.2
+		pandalib: PandaLib 0.6.0
+			dev_pandasystems_universal-serializer: universal-serializer 0.1.0-SNAPSHOT
+		patchouli: Patchouli 1.21.1-93-FABRIC
+			fiber: fiber 0.23.0-2
+		pneumonocore: PneumonoCore 1.3.1
+		puzzleslib: Puzzles Lib 21.1.52
+		rightclickharvest: Right Click Harvest 4.6.1+1.21.1
+		scalablelux: ScalableLux 0.1.0.1+fabric.d0d58ab
+		serversidehorror: Server-Side Horror 4.2
+		showmeyourskin: Show Me Your Skin! 1.11.3+1.21
+		silk-all: Silk (All modules) 1.10.7
+			silk-commands: Silk Commands 1.10.7
+			silk-core: Silk Core 1.10.7
+			silk-game: Silk Game 1.10.7
+			silk-igui: Silk Inventory GUI 1.10.7
+			silk-nbt: Silk NBT 1.10.7
+			silk-network: Silk Network 1.10.7
+			silk-persistence: Silk Persistence 1.10.7
+		simplyswords: Simply Swords 1.63.0-1.21.1
+		simplytooltips: Simply Tooltips 0.1.3
+		skinrestorer: SkinRestorer 2.8.1+1.21-fabric
+			org_mineskin_java-client: java-client 3.2.1-SNAPSHOT
+		smallships: Small Ships 2.0.0-b2.1
+		sophisticatedcore: Sophisticated Core 1.21.1-1.2.9.21.168
+			porting_lib_conditions: Porting Lib Conditions 3.1.0-beta.47+1.21.1
+			porting_lib_lazy_registration: Porting Lib Lazy Register 3.1.0-beta.47+1.21.1
+			team_reborn_energy: Energy 4.1.0
+		sophisticatedstorage: Sophisticated Storage 1.21.1-1.3.7.9.139
+		suikefoxfriend: Fox Friend 6.0.3
+		supplementaries: Supplementaries 1.21.1-3.6.7
+			sablecompanion: Sable Companion 1.5.0
+		toms_storage: Tom's Simple Storage Mod 2.3.0
+		trade_cycling: Trade Cycling 1.21.1-1.0.20
+		travelersbackpack: Traveler's Backpack 10.1.36
+		trinkets: Trinkets 3.10.0
+		txnilib: TxniLib 1.0.24
+		uncrafteverything: UncraftEverything 1.9.2+1.21.1-fabric
+			com_electronwill_night-config_core: core 3.8.1
+			com_electronwill_night-config_toml: toml 3.8.1
+		underwater-swim-fix: Underwater Swim Fix 1.0.2
+		vehiclefix: VehicleFix 5.1.1
+		veinminer: Veinminer 2.10.3
+			fabric-permissions-api-v0: fabric-permissions-api 0.3.1
+		veinminer_enchantment: Veinminer Enchantment 2.10.3
+		villagerleads: VillagerLeads 0.0.3
+		voicechat: Simple Voice Chat 1.21.1-2.6.20
+			voicechat_api: Simple Voice Chat API 2.6.20
+		waystones: Waystones 21.1.34
+		xercamusic: Music Maker Mod 1.21.1-1.2.0
+	NeoForge Mods (kilt): 
+		ambientsounds: AmbientSounds 6.3.8
+		copycats: Create: Copycats+ 3.0.4+mc.1.21.1-neoforge
+		create: Create 6.0.10
+		createdeco: Create Deco 2.1.3
+		flywheel: Flywheel 1.0.6
+		jij_46d2150625c8c57a8605775896d2a97d-registrate-mc121-13067: (Kilt JiJ) 46d2150625c8c57a8605775896d2a97d-Registrate-MC1.21-1.3.0+67 0.0.0
+		mcef: MCEF (Minecraft Chromium Embedded Framework) 2.1.6-1.21.1
+		neoforge: NeoForge 21.1.238
+		ponder: Ponder 1.0.82+mc1.21.1
+		webdisplays: WebDisplays REMASTER 2.1.0
+	Server Running: true
+	Player Count: 1 / 20; [class_3222['Flero114'/7, l='ServerLevel[Paia's SMP - teste]', x=76.61, y=56.06, z=501.45]]
+	Active Data Packs: vanilla, fabric, additionalentityattributes, alloy_forgery, amendments, antixray, artifacts, audioplayer, balm (incompatible), betterfishtanks (incompatible), carryon (incompatible), civilian_aviation, collective, copycats (incompatible), create (incompatible), createdeco (incompatible), easymagic (incompatible), elytraslot (incompatible), explorify, extra_trinkets (incompatible), fabric-convention-tags-v2, farmersdelight, gravestones, immersive_aircraft, immersive_armors, immersive_furniture, immersive_paintings, kilt, lootr, man_of_many_planes, mcwbridges (incompatible), mcwdoors (incompatible), mcwfences (incompatible), mcwfurnitures, mcwlights (incompatible), mcwpaintings (incompatible), mcwpaths, mcwroofs (incompatible), mcwstairs (incompatible), mcwtrpdoors (incompatible), mcwwindows (incompatible), moonlight, more_engines, more_useful_copper (incompatible), mr_craft_musicdiscs, mythicmetals, neoforge, patchouli (incompatible), porting_lib_base, porting_lib_gametest, porting_lib_item_abilities, porting_lib_milk, porting_lib_tags, rightclickharvest, serversidehorror (incompatible), simplyswords, simplytooltips, smallships, sophisticatedcore (incompatible), sophisticatedstorage (incompatible), supplementaries, toms_storage, travelersbackpack, trinkets, uncrafteverything, vehiclefix, veinminer_enchantment, waystones (incompatible), webdisplays (incompatible), xercamusic, supplementaries:generated_pack, amendments:generated_server_pack, create:dynamic_data
+	Available Data Packs: additionalentityattributes, alloy_forgery, amendments, amendments:generated_server_pack, antixray, artifacts, audioplayer, balm (incompatible), betterfishtanks (incompatible), bundle, carryon (incompatible), civilian_aviation, collective, copycats (incompatible), create (incompatible), create:dynamic_data, createdeco (incompatible), easymagic (incompatible), elytraslot (incompatible), explorify, extra_trinkets (incompatible), fabric, fabric-convention-tags-v2, farmersdelight, gravestones, immersive_aircraft, immersive_armors, immersive_furniture, immersive_paintings, kilt, lootr, lootr:lootr_no_advancements, lootr:lootr_no_suspicious_blocks, man_of_many_planes, mcwbridges (incompatible), mcwdoors (incompatible), mcwfences (incompatible), mcwfurnitures, mcwlights (incompatible), mcwpaintings (incompatible), mcwpaths, mcwroofs (incompatible), mcwstairs (incompatible), mcwtrpdoors (incompatible), mcwwindows (incompatible), moonlight, more_engines, more_useful_copper (incompatible), mr_craft_musicdiscs, mythicmetals, neoforge, patchouli (incompatible), porting_lib_base, porting_lib_gametest, porting_lib_item_abilities, porting_lib_milk, porting_lib_tags, rightclickharvest, serversidehorror (incompatible), simplyswords, simplytooltips, smallships, sophisticatedcore (incompatible), sophisticatedstorage (incompatible), supplementaries, supplementaries:generated_pack, toms_storage, trade_rebalance, travelersbackpack, trinkets, uncrafteverything, vanilla, vehiclefix, veinminer_enchantment, waystones (incompatible), webdisplays (incompatible), xercamusic
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Experimental
+	World Seed: 571837641776707370
+	Is Modded: Definitely; Server brand changed to 'fabric + kilt'
+	Type: Dedicated Server (map_server.txt)
+	Crash Report UUID: 9574e52b-9ef7-486c-9f0c-42eba73801d7
+	FML: 4
+	NeoForge: 21.1.238
